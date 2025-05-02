@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "two-tower-search"
+version = "0.1.0"
+description = ""
+authors = ["Haozhe Zhang <zhang.hz6666@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "recsys"}  # Updated package configuration
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+kagglehub = "^0.3.12"
+torch = "^2.6.0"
+pandas = "^2.2.3"
+annoy = "^1.17.3"
+pyarrow = "^19.0.1"
+fastparquet = "^2024.11.0"
+sentence-transformers = "^4.1.0"
+huggingface-hub = "^0.30.2"
+transformers = "4.42"
+matplotlib = "^3.10.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
