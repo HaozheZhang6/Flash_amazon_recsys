@@ -112,11 +112,12 @@ def convert_embedding(product_parquet='versions/1/shopping_queries_dataset_produ
 
 
 def convert_query(input_query):
-    'convert an input query to embedding vector with default dim = 32'
+    'convert an input query list to embedding vector with default dim = 32'
     model = SentenceTransformer('distilbert-base-uncased')
     query_dim = 32
-    input_query = input_query.lower()
-    sentence_embeddings = model.encode([input_query], convert_to_tensor=True)
+    # lower case
+    input_query = [str(x).lower() for x in input_query]
+    sentence_embeddings = model.encode(input_query, convert_to_tensor=True)
     sentence_embeddings = sentence_embeddings.cpu()
     sentence_embeddings = reshape_array(np.array(sentence_embeddings), query_dim)
     return sentence_embeddings

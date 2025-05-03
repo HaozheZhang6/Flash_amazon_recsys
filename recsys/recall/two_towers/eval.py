@@ -1,6 +1,6 @@
 import torch
 from recsys.recall.two_towers.model import TwoTowerModel
-
+from recsys.recall.two_towers.train import select_device
 
 class TwoTowerEvaluator:
     """Loads a TwoTowerModel and computes scores between query and product batches."""
@@ -28,7 +28,7 @@ class TwoTowerEvaluator:
             device: Torch device; defaults to CPU.
         """
         if device is None:
-            device = torch.device("cpu")
+            device = select_device()
         self.device = device
 
         # Instantiate and load weights
@@ -50,7 +50,7 @@ class TwoTowerEvaluator:
         product_batch: torch.Tensor,
     ) -> torch.Tensor:
         """
-        Compute the score matrix for all query–product pairs.
+        Compute the score matrix for all query-product pairs.
 
         Args:
             query_batch: Tensor of shape (n_queries, input_dim_q).
@@ -71,8 +71,7 @@ def main():
     """Example usage of TwoTowerEvaluator."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model_path = (
-        "/Users/haozhezhang/Documents/"
-        "Python Project/two_tower_search/final_model.pt"
+        "/Users/haozhezhang/Documents/Python Project/two_tower_search/models/two_towers/final_model.pt"
     )
 
     # These must match your training config

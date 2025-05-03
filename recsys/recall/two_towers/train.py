@@ -10,7 +10,7 @@ HIDDEN_DIM_QUERY = 64
 
 EMBEDDING_DIM = 32
 LR = 1e-3
-NUM_EPOCHS = 50
+NUM_EPOCHS = 10
 BATCH_SIZE = 64
 NUM_SPLITS = 5
 MODEL_DIR = 'models/two_towers'
@@ -22,18 +22,11 @@ import os
 import time
 import torch
 from torch import nn, autocast
-from torch.nn import functional as F
 from torch.utils.data import TensorDataset, DataLoader
 from torch.optim import AdamW
 from sklearn.model_selection import KFold
 from recsys.recall.two_towers.model import TwoTowerModel
-
-def select_device() -> torch.device:
-    if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
-        return torch.device('mps')
-    if torch.cuda.is_available():
-        return torch.device('cuda')
-    return torch.device('cpu')
+from recsys.recall.two_towers.utils import select_device
 
 
 def create_dataloaders(qd, pd, lbl, train_idx, val_idx, batch_size=32):
@@ -108,7 +101,10 @@ def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100,
         if vl < best_loss:
             best_loss, best_path = vl, os.path.join(model_dir, f'best_fold{fold}.pt')
             torch.save(model.state_dict(), best_path)
-
+    # Print the state dict
+    print(f"\n--- Fold {fold} Initial Model State Dict ---")
+    print(model.state_dict().keys())
+    print(f"-----------------------------------------\n")
     return best_path
 
 
@@ -149,7 +145,6 @@ def main(train_inputs, train_labels, val_inputs, val_labels):
     test_loader = DataLoader(TensorDataset(val_q, val_p, val_y), batch_size=BATCH_SIZE)
     test_loss = evaluate(model, test_loader, nn.BCEWithLogitsLoss(), device)
     print(f'Final Test Loss: {test_loss:.4f}')
-    # Remove the leading '/' from 'final_model.pt'
     torch.save(model.state_dict(), os.path.join(MODEL_DIR, 'final_model.pt'))
 
 if __name__ == '__main__':
