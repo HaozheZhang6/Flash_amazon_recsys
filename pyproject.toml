@@ -20,6 +20,8 @@ sentence-transformers = "^4.1.0"
 huggingface-hub = "^0.30.2"
 transformers = "4.42"
 matplotlib = "^3.10.1"
+xgboost = "^3.0.0"
+scikit-learn = "^1.6.1"
 
 
 [tool.poetry.group.dev.dependencies]

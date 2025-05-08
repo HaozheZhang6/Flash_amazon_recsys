@@ -4,17 +4,13 @@ Train a two-tower retrieval model and save the best model.
 
 INPUT_DIM_QUERY = 32
 INPUT_DIM_PRODUCT = 160
-
-HIDDEN_DIM_PRODUCT = 64
-HIDDEN_DIM_QUERY = 64
-
+DCN_FC_OUT_DIM = 32
 EMBEDDING_DIM = 32
-LR = 1e-3
-NUM_EPOCHS = 10
+LR = 3e-3
+NUM_EPOCHS = 50
 BATCH_SIZE = 64
 NUM_SPLITS = 5
-MODEL_DIR = 'models/two_towers'
-
+MODEL_DIR = 'models/ranking-dcn'
 
 
 
@@ -25,13 +21,12 @@ from torch import nn, autocast
 from torch.utils.data import TensorDataset, DataLoader
 from torch.optim import AdamW
 from sklearn.model_selection import KFold
-from recsys.recall.two_towers.model import TwoTowerModel
+from recsys.ranking.dcn.model import DCN
 from recsys.recall.two_towers.utils import select_device
-from torch.nn import functional as F
+from dataclasses import dataclass
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
 import numpy as np
-
 
 def create_dataloaders(qd, pd, lbl, train_idx, val_idx, batch_size=32):
     train_ds = TensorDataset(qd[train_idx], pd[train_idx], lbl[train_idx])
@@ -51,16 +46,10 @@ def train_one_epoch(model, loader, criterion, optimizer, device):
         )
         if y_batch.dim() == 1:
             y_batch = y_batch.unsqueeze(1)
-        
-        # Convert binary labels to cosine similarity targets
-        # 1 for positive pairs (clicked), -1 for negative pairs (not clicked)
-        cosine_targets = 2 * y_batch - 1  # Convert 0/1 to -1/1
-        
         optimizer.zero_grad()
         with autocast(device_type=device.type, dtype=torch.bfloat16):
             out = model(q_batch, p_batch)
-            # Use MSE loss for cosine similarity
-            loss = F.mse_loss(out, cosine_targets)
+            loss = criterion(out, y_batch)
         loss.backward()
         optimizer.step()
         total_loss += loss.item() * q_batch.size(0)
@@ -77,17 +66,16 @@ def evaluate(model, loader, criterion, device):
             )
             if y_batch.dim() == 1:
                 y_batch = y_batch.unsqueeze(1)
-            
-            # Convert binary labels to cosine similarity targets
-            cosine_targets = 2 * y_batch - 1  # Convert 0/1 to -1/1
-            
             with autocast(device_type=device.type, dtype=torch.bfloat16):
                 out = model(q_batch, p_batch)
-                # Use MSE loss for cosine similarity
-                loss = F.mse_loss(out, cosine_targets)
+                loss = criterion(out, y_batch)
             total_loss += loss.item() * q_batch.size(0)
     return total_loss / len(loader.dataset)
 
+
+def loss_fn(y_true, y_pred):
+    
+    return nn.BCEWithLogitsLoss()(y_true, y_pred)
 
 def plot_losses(train_losses, val_losses, epoch, num_epochs):
     """Plot training and validation losses in real-time"""
@@ -103,7 +91,6 @@ def plot_losses(train_losses, val_losses, epoch, num_epochs):
     plt.tight_layout()
     plt.draw()
     plt.pause(0.1)
-
 
 def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100, lr=1e-3, model_dir='models'):
     device = select_device()
@@ -121,7 +108,9 @@ def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100,
 
     for fold, (tr_i, val_i) in enumerate(kf.split(qd), 1):
         train_loader, val_loader = create_dataloaders(qd, pd, lbl, tr_i, val_i, batch_size)
-        model = TwoTowerModel(qd.size(1), pd.size(1), 64, 64, 32).to(device)
+        model = DCN(
+            config=DCNConfig(),
+        ).to(device)
         optimizer = AdamW(model.parameters(), lr=lr)
 
         # Reset losses for new fold
@@ -130,8 +119,8 @@ def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100,
 
         for epoch in range(1, num_epochs+1):
             start = time.time()
-            tl = train_one_epoch(model, train_loader, None, optimizer, device)
-            vl = evaluate(model, val_loader, None, device)
+            tl = train_one_epoch(model, train_loader, loss_fn, optimizer, device)
+            vl = evaluate(model, val_loader, loss_fn, device)
             elapsed = time.time() - start
 
             # Store losses
@@ -153,6 +142,14 @@ def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100,
     plt.close()  # Close the plot
     return best_path
 
+@dataclass
+class DCNConfig:
+    dcn_layers: int = 4
+    dnn_layers: int = 4
+    q_in: int = INPUT_DIM_QUERY
+    p_in: int = INPUT_DIM_PRODUCT
+    hidden_dim: int = EMBEDDING_DIM
+    embed_dim: int = EMBEDDING_DIM
 
 def main(train_inputs, train_labels, val_inputs, val_labels):
 
@@ -180,13 +177,10 @@ def main(train_inputs, train_labels, val_inputs, val_labels):
     assert train_q.size(1) == INPUT_DIM_QUERY
     assert train_p.size(1) == INPUT_DIM_PRODUCT
 
-    model = TwoTowerModel(
-        q_in=INPUT_DIM_QUERY, 
-        p_in=INPUT_DIM_PRODUCT, 
-        q_hidden=HIDDEN_DIM_QUERY, 
-        p_hidden=HIDDEN_DIM_PRODUCT, 
-        emb=EMBEDDING_DIM
+    model = DCN(
+        config=DCNConfig(),
         ).to(device)
+
     model.load_state_dict(torch.load(best, map_location=device))
     test_loader = DataLoader(TensorDataset(val_q, val_p, val_y), batch_size=BATCH_SIZE)
     test_loss = evaluate(model, test_loader, nn.BCEWithLogitsLoss(), device)
@@ -195,5 +189,5 @@ def main(train_inputs, train_labels, val_inputs, val_labels):
 
 if __name__ == '__main__':
     from recsys.data.load_data import load_data
-    train_inputs, train_labels, val_inputs, val_labels = load_data()
+    train_inputs, train_labels, val_inputs, val_labels = load_data(usage="ranking")
     main(train_inputs, train_labels, val_inputs, val_labels)

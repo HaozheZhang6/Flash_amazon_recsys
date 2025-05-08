@@ -1,0 +1,626 @@
+Ranking Results with Recall Comparison
+====================================================================================================
+
+Query: smart phone, large screen
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 186, Change: +185)
+Product ID: 98833
+Title: Phone Tripod Mount with Remote 360 Rotation Smartphone Holder Adapter Compatible with iPhone 11 Pro Xs Max XR X 8 7 6 6s Plus Samsung Nexus
+Score: 2.4395
+--------------------------------------------------
+Rank 2 (Recall Rank: 94, Change: +92)
+Product ID: 49456
+Title: DisplayPort to HDMI 6 Feet Cable, Benfei DisplayPort to HDMI Male to Male Adapter Gold-Plated Cord Compatible with Lenovo, HP, ASUS, Dell and Other Brand
+Score: 2.1918
+--------------------------------------------------
+Rank 3 (Recall Rank: 96, Change: +93)
+Product ID: 49457
+Title: BENFEI 1.8m DisplayPort（ディスプレイポート） - HDMI 変換ケーブル　オス・オス 【相性保証付き】
+Score: 2.1918
+--------------------------------------------------
+Rank 4 (Recall Rank: 238, Change: +234)
+Product ID: 66189
+Title: Alcatel QUICKFLIP 4044C | 4G LTE | HD Voice FlipPhone | Cricket Unlocked for T-Mobile & AT&T, Grey, 4GB
+Score: 2.1816
+--------------------------------------------------
+Rank 5 (Recall Rank: 145, Change: +140)
+Product ID: 49515
+Title: Mpow HC6 USB Headset with Microphone, Comfort-fit Office Computer Headphone, On-Ear 3.5mm Jack Call Center Headset for Cell Phone, 270 Degree Boom Mic, in-line Control with Mute for Skype, Webinar
+Score: 2.1436
+--------------------------------------------------
+Rank 6 (Recall Rank: 257, Change: +251)
+Product ID: 17067
+Title: Shure MV5C Home Office Microphone, Conferencing Microphone for Mac & PC, Crystal Clear Voice & Call, Durable & Portable Design, Quick & Easy Setup, Works with Team, Zoom & Others - Black (MV5C-USB)
+Score: 2.0322
+--------------------------------------------------
+Rank 7 (Recall Rank: 70, Change: +63)
+Product ID: 65178
+Title: HP ENVY 5660 Wireless All-in-One Photo Printer with Mobile Printing, HP Instant Ink & Amazon Dash Replenishment ready (F8B04A) (Renewed)
+Score: 1.9918
+--------------------------------------------------
+Rank 8 (Recall Rank: 142, Change: +134)
+Product ID: 49512
+Title: Mpow 071 USB Headset/ 3.5mm Computer Headset with Microphone Noise Cancelling, Lightweight PC Headset Wired Headphones, Business Headset for Skype, Webinar, Cell Phone, Call Center
+Score: 1.9765
+--------------------------------------------------
+Rank 9 (Recall Rank: 281, Change: +272)
+Product ID: 115430
+Title: Amazon Basics USB-C to Lightning Cable Cord, MFi Certified Charger for Apple iPhone 13/12/11, iPad, White, 3-Ft
+Score: 1.9615
+--------------------------------------------------
+Rank 10 (Recall Rank: 57, Change: +47)
+Product ID: 98522
+Title: COWIN E7 PRO [Upgraded] Active Noise Cancelling Headphones Bluetooth Headphones with Microphone/Deep Bass Wireless Headphones Over Ear 30H Playtime for Travel/Work/TV/Computer/Cellphone - Black
+Score: 1.9563
+--------------------------------------------------
+Rank 11 (Recall Rank: 33, Change: +22)
+Product ID: 16536
+Title: Incase Textured Hardshell in Woolenex for MacBook Air 13" W/Retina Display
+Score: 1.9311
+--------------------------------------------------
+Rank 12 (Recall Rank: 249, Change: +237)
+Product ID: 115358
+Title: Anker Wireless Charger, 313 Wireless Charger (Stand), Qi-Certified for iPhone 12, 12 mini, 12 Pro Max, SE, 11, 11 Pro, 11 Pro Max, XR, XS Max, 10W Fast-Charging Galaxy S20, S10 (No AC Adapter)
+Score: 1.9291
+--------------------------------------------------
+Rank 13 (Recall Rank: 75, Change: +62)
+Product ID: 98575
+Title: Pyle Wireless Bluetooth Power Amplifier System 300W 4 Channel Home Theater Audio Stereo Sound Receiver Box Entertainment w/ USB, RCA, 3.5mm AUX, LED, Remote for Speaker, PA, Studio- PT390BTU,BLACK
+Score: 1.8539
+--------------------------------------------------
+Rank 14 (Recall Rank: N/A, Change: N/A)
+Product ID: 65172
+Title: HP OfficeJet 5255 All-in-One Printer with Mobile Printing, Instant Ink Ready - Black (Renewed)
+Score: 1.8504
+--------------------------------------------------
+Rank 15 (Recall Rank: 40, Change: +25)
+Product ID: 98484
+Title: RAVPower Portable Charger 20000mAh PD 3.0 Power Bank QC 3.0 18W USB C External Battery Pack Tri-input and Tri-output Cell Phone Charger Battery for iPhone, Samsung Galaxy and More
+Score: 1.8055
+--------------------------------------------------
+Rank 16 (Recall Rank: N/A, Change: N/A)
+Product ID: 115007
+Title: Amazon Basics AA 1.5 Volt Performance Alkaline Batteries - Pack of 20
+Score: 1.7763
+--------------------------------------------------
+Rank 17 (Recall Rank: 120, Change: +103)
+Product ID: 49482
+Title: VicTsing HDMI to VGA Adapter Converter Gold-Plated for PC, Laptop, DVD, Desktop and Other HDMI Input Devices - Black
+Score: 1.7586
+--------------------------------------------------
+Rank 18 (Recall Rank: 139, Change: +121)
+Product ID: 49502
+Title: OV LED 802100 Broadbeam LED Headlamp, Ultra-Low Profile Durable Elastic Headband, 210° Illumination, 300 Lumens, 20 Bright LED Lights, 3 AAA Battery Powered, 3 Power Settings
+Score: 1.7385
+--------------------------------------------------
+Rank 19 (Recall Rank: 228, Change: +209)
+Product ID: 98942
+Title: Kinverch 1500W Pure Sine Wave Power Inverter 12V DC to 110V AC Car Inverter with Bluetooth and 2AC Outlets &USB Port for Truck/RV/Home
+Score: 1.7382
+--------------------------------------------------
+Rank 20 (Recall Rank: 51, Change: +31)
+Product ID: 82120
+Title: Bluetooth Audio Adapter for Music Streaming Sound System, Esinkin Wireless Audio Adapter Works with Smartphones and Tablets, Wireless Adapter for Speakers
+Score: 1.7303
+--------------------------------------------------
+Rank 21 (Recall Rank: 160, Change: +139)
+Product ID: 131503
+Title: Sony S200F 2.1ch Soundbar with built-in Subwoofer and Bluetooth Home Theater Audio for TV, (HT200F), easy setup, compact, home office use with clear sound black
+Score: 1.7294
+--------------------------------------------------
+Rank 22 (Recall Rank: 76, Change: +54)
+Product ID: 98576
+Title: Denon AVR-X4500H Receiver - 8 HDMI In /3 Out, High Power 9.2 Channel Amplifier (125 W/Ch) | Dolby Surround Sound, Music Streaming with Alexa + HEOS
+Score: 1.7203
+--------------------------------------------------
+Rank 23 (Recall Rank: 212, Change: +189)
+Product ID: 115293
+Title: JLab Go Work Wireless On-Ear Headphones with Boom Mic | Bluetooth or Wired Office Headset | Multipoint Connect | 45+ Hours Playtime | Clear Calls and Video Calls Using Your Computer or Mobile Device
+Score: 1.7092
+--------------------------------------------------
+Rank 24 (Recall Rank: 270, Change: +246)
+Product ID: 115408
+Title: Powerbeats Pro Wireless Earbuds - Apple H1 Headphone Chip, Class 1 Bluetooth Headphones, 9 Hours of Listening Time, Sweat Resistant, Built-in Microphone - Cloud Pink
+Score: 1.7079
+--------------------------------------------------
+Rank 25 (Recall Rank: 1, Change: -24)
+Product ID: 114692
+Title: LG 32LM620BPUA 32" Class 720p Smart LED HD TV (2019)
+Score: 1.7078
+--------------------------------------------------
+Rank 26 (Recall Rank: 189, Change: +163)
+Product ID: 98839
+Title: Tripp Lite SMART1500LCDT 1500VA 900W UPS Battery Back Up, AVR, LCD Display, Line-Interactive, 10 Outlets, 120V, USB, Tel & Coax Protection, 3 Year Warranty & Dollar 250,000 Insurance Black
+Score: 1.6854
+--------------------------------------------------
+Rank 27 (Recall Rank: 291, Change: +264)
+Product ID: 761
+Title: Acer Chromebook 11, Celeron N3350, 11.6" HD, 4GB LPDDR4, 32GB eMMC, Google Chrome, C732-C6WU
+Score: 1.6245
+--------------------------------------------------
+Rank 28 (Recall Rank: 289, Change: +261)
+Product ID: 760
+Title: Acer Google Chromebook Celeron N3350 LPDDR4_4GB eMMC_32GB 11.6インチHD 英語キーボード USB Type-C 802.11ac+Bluetooth 4.2 microSD 約12時間駆動仕様【北米輸入品】
+Score: 1.6245
+--------------------------------------------------
+Rank 29 (Recall Rank: 121, Change: +92)
+Product ID: 16715
+Title: GE, Black, 3-Way Socket, Turn for Low, Medium and High Settings, For Floor and Table Lamps, DIY Project, UL Listed, 18275, 1 Pack
+Score: 1.6052
+--------------------------------------------------
+Rank 30 (Recall Rank: 86, Change: +56)
+Product ID: 49449
+Title: DisplayPort to HDMI 6 Feet Gold-Plated Cable, Avacon Display Port to HDMI Adapter Male to Male Black
+Score: 1.5790
+--------------------------------------------------
+
+Query: summer dress for women
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 450, Change: +449)
+Product ID: 98684
+Title: Sanifer Women Lace Long Sleeve Tunic Top Blouse (Small, Bright Red)
+Score: 2.1314
+--------------------------------------------------
+Rank 2 (Recall Rank: 491, Change: +489)
+Product ID: 115147
+Title: SheIn Women's Summer Pleated Strapless Tube Top Solid Bandeau Crop Tank Cami Top Multicoloured Small
+Score: 2.1156
+--------------------------------------------------
+Rank 3 (Recall Rank: 595, Change: +592)
+Product ID: 115368
+Title: Hue Women's Fashion Shortie Anklet Socks, Assorted Sockshosiery, -White - sheer, One Size
+Score: 2.0515
+--------------------------------------------------
+Rank 4 (Recall Rank: 558, Change: +554)
+Product ID: 131681
+Title: Andongnywell Women Sexy Spaghetti Strap Mermaid Evening Maxi Dress V Neck Long Formal Evening Gown Dress (White,Small)
+Score: 2.0500
+--------------------------------------------------
+Rank 5 (Recall Rank: 446, Change: +441)
+Product ID: 65900
+Title: ohyeahlady Women Faux Fur Robe Long Sleeve Nightgowns Black Sheer Mesh Long Lingerie Robes with Belt M
+Score: 1.9872
+--------------------------------------------------
+Rank 6 (Recall Rank: 342, Change: +336)
+Product ID: 49279
+Title: Hanes 6.1 oz. Tagless ComfortSoft Long-Sleeve T-Shirt, Large, White
+Score: 1.9806
+--------------------------------------------------
+Rank 7 (Recall Rank: 474, Change: +467)
+Product ID: 33213
+Title: Bluetime Women's Autumn Casual Tunic Maxi Dress Full Length Floral Printed 3/4 Sleeve Long Dresses (White, L)
+Score: 1.9785
+--------------------------------------------------
+Rank 8 (Recall Rank: 421, Change: +413)
+Product ID: 82242
+Title: SweatyRocks Women's Summer Casual Short Sleeve Rainy Print Cute Crop Top T-Shirt Blue S
+Score: 1.9736
+--------------------------------------------------
+Rank 9 (Recall Rank: 565, Change: +556)
+Product ID: 17005
+Title: Hanes Girls' Big ComfortSoft Long Sleeve Tee, White, XL
+Score: 1.9571
+--------------------------------------------------
+Rank 10 (Recall Rank: 435, Change: +425)
+Product ID: 82263
+Title: Romwe Women's Short Sleeve Top Casual Graphic Print Tee Shirt Blue M
+Score: 1.9476
+--------------------------------------------------
+Rank 11 (Recall Rank: 433, Change: +422)
+Product ID: 98647
+Title: ECOWISH Women's V Neck Polka Dot Ruffles Mini Sexy Dress Short Sleeve Wrap Summer Dresses with Belt Red Small
+Score: 1.9457
+--------------------------------------------------
+Rank 12 (Recall Rank: 327, Change: +315)
+Product ID: 65618
+Title: MIHOLL Women's Short Sleeve V-Neck Shirts Loose Casual Leopard Print Tee T-Shirt Tops (Leopard- Army Green, Large)
+Score: 1.9432
+--------------------------------------------------
+Rank 13 (Recall Rank: 378, Change: +365)
+Product ID: 49363
+Title: Century Star Women's Casual Tank Top Sleeveless Blouse Twist Knot Waffle Knit Shirts Cute Tops White Small
+Score: 1.9207
+--------------------------------------------------
+Rank 14 (Recall Rank: 429, Change: +415)
+Product ID: 335
+Title: Staron Women Tank Tops Funny No Bra Club Slim Vest Short Tees Bra Blouse Crop Tops Pink
+Score: 1.9122
+--------------------------------------------------
+Rank 15 (Recall Rank: 502, Change: +487)
+Product ID: 49633
+Title: Hello Kitty Women's Long Dorm Nightgown Tie Dye Pajama Sleepwear, Pink, Small
+Score: 1.8970
+--------------------------------------------------
+Rank 16 (Recall Rank: 492, Change: +476)
+Product ID: 115152
+Title: SheIn Women's Floral Print Off Shoulder Puff Short Sleeve Frill Crop Blouse Shirts Baby Pink Floral Small
+Score: 1.8958
+--------------------------------------------------
+Rank 17 (Recall Rank: 526, Change: +509)
+Product ID: 562
+Title: Amazon Essentials Women's Studio Terry Jumpsuit, Charcoal Grey Heather, Medium
+Score: 1.8791
+--------------------------------------------------
+Rank 18 (Recall Rank: 551, Change: +533)
+Product ID: 131677
+Title: Salimdy Women Sexy Floral Lace Mesh Sheer Hollow Out Deep V Neck Spaghetti Strap Bodycon Pencil Mermaid Midi Dress White
+Score: 1.8777
+--------------------------------------------------
+Rank 19 (Recall Rank: 469, Change: +450)
+Product ID: 131509
+Title: Amazon Brand - Lark & Ro Women's Premium Mid-Weight Blend Long Sleeve Turtleneck Relaxed Fit Sweater, Ivory, X-Large
+Score: 1.8748
+--------------------------------------------------
+Rank 20 (Recall Rank: 395, Change: +375)
+Product ID: 16622
+Title: Amazon Essentials Women's Classic-Fit Long-Sleeve Turtleneck Top, Charcoal Heather, X-Large
+Score: 1.8733
+--------------------------------------------------
+Rank 21 (Recall Rank: 313, Change: +292)
+Product ID: 130263
+Title: Plus Size 2 Piece Sets for Women - Sexy Colorblock Short Sleeve Tshirt Tops + Skinny Shorts Two Piece Outfits Leopard Red 2XL
+Score: 1.8658
+--------------------------------------------------
+Rank 22 (Recall Rank: 401, Change: +379)
+Product ID: 16630
+Title: ZXZY Ladies Tie Dye Shirt Top Oversized Summer Loose T Shirt Blouse for Women (Black, XX-Large)
+Score: 1.8649
+--------------------------------------------------
+Rank 23 (Recall Rank: 461, Change: +438)
+Product ID: 33176
+Title: Milumia Women's Vintage Floral Lace Long Sleeve Ruched Neck Flowy Long Dress Black XX-Large
+Score: 1.8645
+--------------------------------------------------
+Rank 24 (Recall Rank: 412, Change: +388)
+Product ID: 16662
+Title: NIMIN High Waisted Dress Pants for Women Elastic Waist Teacher Pants Business Casual Summer Beach Pants with Pockets Black Small
+Score: 1.8578
+--------------------------------------------------
+Rank 25 (Recall Rank: 563, Change: +538)
+Product ID: 17000
+Title: SheIn Women's Bow Tie Satin Bodysuit Plunging Neck Sexy Long Sleeve Blouse Top Small Orange
+Score: 1.8495
+--------------------------------------------------
+Rank 26 (Recall Rank: 465, Change: +439)
+Product ID: 98728
+Title: Aitsite Buffalo Plaid Christmas Tree Skirt 48 Inch Thick Rustic Xmas Tree Skirt for Christmas New Year Holiday Party Home Ornaments Decorations Indoor Outdoor (Red)
+Score: 1.8410
+--------------------------------------------------
+Rank 27 (Recall Rank: 477, Change: +450)
+Product ID: 98752
+Title: Women's Canvas Shoes Slip-on Ballet Flats Classic Casual Sneakers Daily Loafers Red
+Score: 1.8383
+--------------------------------------------------
+Rank 28 (Recall Rank: 534, Change: +506)
+Product ID: 575
+Title: CUPSHE Women's Red Ruffled Lace Up One Piece Swimsuit, L
+Score: 1.8343
+--------------------------------------------------
+Rank 29 (Recall Rank: 464, Change: +435)
+Product ID: 98726
+Title: Christmas Tree Skirt - 48 inches Large White Luxury Faux Fur Tree Skirt Christmas Decorations Holiday Thick Plush Tree Xmas Ornaments (White/Sliver)
+Score: 1.8310
+--------------------------------------------------
+Rank 30 (Recall Rank: 325, Change: +295)
+Product ID: 65616
+Title: SheIn Women's One Shoulder Long Sleeve Casual Leopard Tops Blouse Leopard-Black&Brown L
+Score: 1.8309
+--------------------------------------------------
+
+Query: smartphone charger
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 900, Change: +899)
+Product ID: 115430
+Title: Amazon Basics USB-C to Lightning Cable Cord, MFi Certified Charger for Apple iPhone 13/12/11, iPad, White, 3-Ft
+Score: 2.9794
+--------------------------------------------------
+Rank 2 (Recall Rank: 611, Change: +609)
+Product ID: 16418
+Title: iHome iBT234 Dual Alarm Clock FM Radio Bluetooth Speaker, Voice Control Siri and Google Assistant, with USB Charging Station/Phone Chargers for Bedrooms
+Score: 2.9324
+--------------------------------------------------
+Rank 3 (Recall Rank: 891, Change: +888)
+Product ID: 115417
+Title: Xcentz iPhone Charger 2 Pack 6ft, Apple MFi Certified Lightning Cable Fast Charger iPhone Cable, Durable Braided Nylon Metal Connector Charger Cord for iPhone 11/X/XS Max/XR/8 Plus/7/6/5, ipad - Blue
+Score: 2.9316
+--------------------------------------------------
+Rank 4 (Recall Rank: 661, Change: +657)
+Product ID: 98522
+Title: COWIN E7 PRO [Upgraded] Active Noise Cancelling Headphones Bluetooth Headphones with Microphone/Deep Bass Wireless Headphones Over Ear 30H Playtime for Travel/Work/TV/Computer/Cellphone - Black
+Score: 2.9160
+--------------------------------------------------
+Rank 5 (Recall Rank: 643, Change: +638)
+Product ID: 98484
+Title: RAVPower Portable Charger 20000mAh PD 3.0 Power Bank QC 3.0 18W USB C External Battery Pack Tri-input and Tri-output Cell Phone Charger Battery for iPhone, Samsung Galaxy and More
+Score: 2.8058
+--------------------------------------------------
+Rank 6 (Recall Rank: 834, Change: +828)
+Product ID: 98931
+Title: AfterShokz OpenComm Wireless Stereo Bone Conduction Bluetooth Headset with Noise-Canceling Boom Microphone for Office Home Business Trucker Drivers Commercial Use
+Score: 2.7809
+--------------------------------------------------
+Rank 7 (Recall Rank: 855, Change: +848)
+Product ID: 662
+Title: Yodoit for iPhone 6s Plus Screen Replacement Touch LCD Display Digitizer Glass Full Assembly Camera Home Button Proximity Sensor Earpiece Speaker + Tool 5.5 inches (Black)
+Score: 2.7364
+--------------------------------------------------
+Rank 8 (Recall Rank: 854, Change: +846)
+Product ID: 661
+Title: Yodoit iPhone6s Plus フロントパネル 画面 液晶 取り付け簡単化 (ホームボタン+スピーカー+カメラ+3Dタッチ+近接センサーが含まれる) 修理交換用 LCD タッチパネル ガラス スクリーン 修理パーツ デジタイザ 工具+画面保護フィルム付属 (黒 5.5インチ)
+Score: 2.7364
+--------------------------------------------------
+Rank 9 (Recall Rank: 845, Change: +836)
+Product ID: 650
+Title: Bose QuietComfort 35 II Wireless Bluetooth Headphones, Noise-Cancelling, with Alexa Voice Control - Black
+Score: 2.7192
+--------------------------------------------------
+Rank 10 (Recall Rank: 844, Change: +834)
+Product ID: 649
+Title: Auriculares Bluetooth con Cancelación de Ruido Bose QuietComfort 35 II: Auriculares externos Inalámbricos con Micrófono Integrado y Control por Voz de Alexa, Negro
+Score: 2.7192
+--------------------------------------------------
+Rank 11 (Recall Rank: 843, Change: +832)
+Product ID: 648
+Title: Bose QuietComfort 35 wireless headphones II - Black [並行輸入品]
+Score: 2.7192
+--------------------------------------------------
+Rank 12 (Recall Rank: N/A, Change: N/A)
+Product ID: 33310
+Title: ZAGG Slim Book Ultrathin Case, Hinged with Detachable Bluetooth Keyboard for Apple iPad Pro 12.9 1st & 2nd Generation 2015/2017 - Black
+Score: 2.7146
+--------------------------------------------------
+Rank 13 (Recall Rank: 733, Change: +720)
+Product ID: 33108
+Title: Mpow USB Headset (All-Platform Edition) with 3.5mm Jack, Stereo Computer Headset with Microphone Noise-Canceling, Skype Headphones w/Comfort-fit Earpad, Inline Volume Control for PC/Laptop/Cell Phone
+Score: 2.6800
+--------------------------------------------------
+Rank 14 (Recall Rank: 811, Change: +797)
+Product ID: 66096
+Title: Tranesca 2-in-1 Charger Compatible with Fitbit Versa 2 - Tranesca Versa 2 Charging Stand/Charging Dock/Charging Cradle for Fitbit Versa 2 and Cell Phone
+Score: 2.6700
+--------------------------------------------------
+Rank 15 (Recall Rank: 796, Change: +781)
+Product ID: 98833
+Title: Phone Tripod Mount with Remote 360 Rotation Smartphone Holder Adapter Compatible with iPhone 11 Pro Xs Max XR X 8 7 6 6s Plus Samsung Nexus
+Score: 2.6558
+--------------------------------------------------
+Rank 16 (Recall Rank: N/A, Change: N/A)
+Product ID: 98808
+Title: Trijicon RM06-C-700672 RMR Type 2 Adjustable LED Sight, 3.25 MOA Red Dot Reticle, Black
+Score: 2.6466
+--------------------------------------------------
+Rank 17 (Recall Rank: N/A, Change: N/A)
+Product ID: 115433
+Title: Anker iPhone Charger Cable 10 Foot, Powerline+ II Lightning Cable, (10 ft MFi Certified) Extra Long iPhone Charging Cord Compatible with iPhone SE 11 Pro Max Xs XR X 8 7 6S, iPad 8 and More (Silver)
+Score: 2.6243
+--------------------------------------------------
+Rank 18 (Recall Rank: 653, Change: +635)
+Product ID: 131270
+Title: Retekess TR602 Digital Radios, Radios Portable AM FM, Stereo Rechargeable Radio Supports TF USB Port, Sleep Timer and Hand-Free for Home or Outdoor
+Score: 2.6237
+--------------------------------------------------
+Rank 19 (Recall Rank: 813, Change: +794)
+Product ID: 33335
+Title: TOGUARD Backup Camera Kit, 7’’ LCD Rear View Monitor with IP67 Waterproof Night Vision Back up Rearview Reverse Cam for Trucks, RVs, Trailers, Bus, Harveste, Pickup, Motor Home, Van Large Vehicles
+Score: 2.5502
+--------------------------------------------------
+Rank 20 (Recall Rank: 749, Change: +729)
+Product ID: 49515
+Title: Mpow HC6 USB Headset with Microphone, Comfort-fit Office Computer Headphone, On-Ear 3.5mm Jack Call Center Headset for Cell Phone, 270 Degree Boom Mic, in-line Control with Mute for Skype, Webinar
+Score: 2.5375
+--------------------------------------------------
+Rank 21 (Recall Rank: 816, Change: +795)
+Product ID: 576
+Title: WORX WA3575 20V PowerShare 2.0 Ah Replacement Battery, Orange and Black
+Score: 2.5359
+--------------------------------------------------
+Rank 22 (Recall Rank: 830, Change: +808)
+Product ID: 620
+Title: UGREEN 3.5mm to 2RCA Male Cable Audio Adapter RCA Auxiliary Hi-Fi Sound Shielded Stereo Flexible RCA Y Splitter Cable Cord Metal Shell Compatible with Smartphone Speakers Tablet HDTV MP3 Player 6FT
+Score: 2.5295
+--------------------------------------------------
+Rank 23 (Recall Rank: 829, Change: +806)
+Product ID: 619
+Title: Ugreen 3.5mm ステレオミニプラグ to 2RCA(赤/白) 変換 ステレオオーディオケーブル スマホ タブレット TV 等に対応 2m
+Score: 2.5295
+--------------------------------------------------
+Rank 24 (Recall Rank: 718, Change: +694)
+Product ID: 115007
+Title: Amazon Basics AA 1.5 Volt Performance Alkaline Batteries - Pack of 20
+Score: 2.5200
+--------------------------------------------------
+Rank 25 (Recall Rank: 644, Change: +619)
+Product ID: 98485
+Title: Portable Charger USB C RAVPower 20000mAh Power Bank 60W PD3.0 Fast Charging Compact Battery Pack Laptop Charger for MacBook Pro Dell XPS iPad Pro iPhone 12 Pro Mini Switch (Charger Not Included)
+Score: 2.4828
+--------------------------------------------------
+Rank 26 (Recall Rank: 890, Change: +864)
+Product ID: 115416
+Title: Fast Charger Compatible with iPhone 11 Xs Max XR X 8 Plus iPad Pro and More, 18W USB C Power Delivery Wall Charger Adapter Plug with Type C to LightningCable
+Score: 2.4750
+--------------------------------------------------
+Rank 27 (Recall Rank: 642, Change: +615)
+Product ID: 98483
+Title: Upgraded Power Bank RAVPower 16750mAh Portable Charger Ultra-Compact External Battery Pack with 4.5A Max Output Phone Charger 2 USB Ports & Flashlight for iPhone 12 Mini Pro Max 11 SE Samsung Galaxy
+Score: 2.4676
+--------------------------------------------------
+Rank 28 (Recall Rank: 756, Change: +728)
+Product ID: 131461
+Title: Alarm Security System,Wireless DIY Burglar Alarm 18 Piece Kit with GSM 3G/4G and WiFi APP Control for Home Office & Shop - Compatible with Alexa and Google Assistant
+Score: 2.4609
+--------------------------------------------------
+Rank 29 (Recall Rank: 739, Change: +710)
+Product ID: 49498
+Title: VEKKIA Ultra Bright LED Headlamp - 5 Lighting Modes, White & Red LEDs, Adjustable Strap, IPX6 Water Resistant. Great for Running, Camping, Hiking & More. Batteries Included
+Score: 2.4380
+--------------------------------------------------
+Rank 30 (Recall Rank: 626, Change: +596)
+Product ID: 49259
+Title: GUB Bicycle & Motorcycle Phone Mount, Aluminum Bike Phone Holder Mount with 360° Rotation for iPhone 11 12 Pro Max Mini X XR Xs 8 Plus, Samsung S20 S10 Note20/10/9/8 4-7 Inch - Upgraded
+Score: 2.4285
+--------------------------------------------------
+
+Query: large iron pan
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 931, Change: +930)
+Product ID: 131176
+Title: Iconikal Disposable Dry Floor Dust Mop Pad Refills, 11.5 x 8-Inch, 90-Count
+Score: 2.4315
+--------------------------------------------------
+Rank 2 (Recall Rank: 1118, Change: +1116)
+Product ID: 598
+Title: GARCIMA 5020091 Paellero Gas Butano 400 mm, Hierro, Negro
+Score: 2.4252
+--------------------------------------------------
+Rank 3 (Recall Rank: 1117, Change: +1114)
+Product ID: 597
+Title: Garcima Paella Dual Ring Butane/Propane Gas Burner, Black, 40 cm
+Score: 2.4252
+--------------------------------------------------
+Rank 4 (Recall Rank: 1067, Change: +1063)
+Product ID: 33237
+Title: Joyhalo Silicone Oven Mitts, Heat Resistant 500 Degrees, Safe and Flexible Long Kitchen Mittens Cooking Baking for Women, Wine
+Score: 2.3485
+--------------------------------------------------
+Rank 5 (Recall Rank: 930, Change: +925)
+Product ID: 131175
+Title: UKEENOR Dry Mop Refills Sweeper 160 Count Disposable Dusting Cloths Dry Sweeping Refills Dry Duster Cloths Mop Pads Floor Cloth Refills Electrostatic Cloths 7.9"x11.6" Box Packing
+Score: 2.3279
+--------------------------------------------------
+Rank 6 (Recall Rank: 1041, Change: +1035)
+Product ID: 405
+Title: ARC Tortilla Press 8.1 inch,Roti Maker,Haevy Duty Tortillera,Cast Iron Tortilla Maker，Pataconera,Flour Tortilla Press,Chapati Maker,Taco Maker,Taco Press,Puri Press,Even Pressing Black
+Score: 2.3100
+--------------------------------------------------
+Rank 7 (Recall Rank: 1002, Change: +995)
+Product ID: 307
+Title: Swpeet 3Pcs Heavy Duty Glass Running Pliers, Breaker Grozer Pliers and Grip Oil Feed Glass Cutter Kit, Professional Stained Glass Cutting Tool with Extra Rubber Tips Perfect for Stained Glass Work
+Score: 2.3023
+--------------------------------------------------
+Rank 8 (Recall Rank: 985, Change: +977)
+Product ID: 266
+Title: Lavador Tongs for Cooking, Kitchen Tongs with Silicone Tips, High Heat Resistant Locking Tongs, Heavy Duty,Great Grips,Set of 3-7,9,12 inches
+Score: 2.2716
+--------------------------------------------------
+Rank 9 (Recall Rank: 947, Change: +938)
+Product ID: 131210
+Title: SD-9254W: Energy Star 18″ Built-In Dishwasher w/Heated Drying – White
+Score: 2.2617
+--------------------------------------------------
+Rank 10 (Recall Rank: 1059, Change: +1049)
+Product ID: 33217
+Title: Klabb stainless steel Shower Hose, 96 Inches Chrome Handheld Shower Head Hose With Brass insert and nut.
+Score: 2.2509
+--------------------------------------------------
+Rank 11 (Recall Rank: 1191, Change: +1180)
+Product ID: 99042
+Title: DANCO Lift and Turn Tub and Bath Drain Stopper, Chrome (88599)
+Score: 2.2113
+--------------------------------------------------
+Rank 12 (Recall Rank: 1023, Change: +1011)
+Product ID: 98653
+Title: eBoot 9 Pieces Gel Filter Transparent Color Film Plastic Sheets Correction Gel Light Filter, 11.7 by 8.3 Inches, 9 Colors
+Score: 2.1710
+--------------------------------------------------
+Rank 13 (Recall Rank: 1119, Change: +1106)
+Product ID: 602
+Title: GasOne Square Heavy Duty Single Burner Outdoor Stove Propane Gas Cooker with Adjustable 0-20Psi Regulator & Steel Braided Hose Perfect for Home Brewing, Turkey Fry, Maple Syrup Prep
+Score: 2.1543
+--------------------------------------------------
+Rank 14 (Recall Rank: 1009, Change: +995)
+Product ID: 33082
+Title: Permatex 24200 Medium Strength Threadlocker Blue, 6 ml
+Score: 2.1387
+--------------------------------------------------
+Rank 15 (Recall Rank: 1126, Change: +1111)
+Product ID: 66157
+Title: Remington 8510 Anti Frizz Therapy Hair Straightener, 1 Inch Ceramic Flat Iron with Digital Controls, White
+Score: 2.1271
+--------------------------------------------------
+Rank 16 (Recall Rank: 934, Change: +918)
+Product ID: 98411
+Title: superbobi- Water Basin Replacement for Rainbow D3C D4C Vacuum Cleaner
+Score: 2.0906
+--------------------------------------------------
+Rank 17 (Recall Rank: 913, Change: +896)
+Product ID: 98348
+Title: Hunter Sprinkler PCC1200I PCC 12-Station Indoor Irrigation Controller
+Score: 2.0744
+--------------------------------------------------
+Rank 18 (Recall Rank: 946, Change: +928)
+Product ID: 136
+Title: LASCO 11-1182 F-10 Shaws Pads Toilet Bowl Ring Remover with Handle, Scouring Pad with Handle
+Score: 2.0663
+--------------------------------------------------
+Rank 19 (Recall Rank: 1170, Change: +1151)
+Product ID: 33479
+Title: OlarHike Grilling Accessories BBQ Grill Tools Set, 25PCS Stainless Steel Grilling Kit for Smoker, Camping, Kitchen, Barbecue Utensil Gifts for Men Women with Thermometer and Meat Injector
+Score: 2.0583
+--------------------------------------------------
+Rank 20 (Recall Rank: 987, Change: +967)
+Product ID: 268
+Title: Kitchen Silicone Tongs7‘’ 9‘’ 12‘’- Heat Resistant with Easy Grip and Smart Padlock System Great for Salad,BBQ,Serving,Buffet,Frying Tongs Utensils,Kitchen Gifts etc…… (blue)
+Score: 2.0497
+--------------------------------------------------
+Rank 21 (Recall Rank: 1116, Change: +1095)
+Product ID: 33365
+Title: Expandable Pot and Pan Organizers Rack, AHNR 10+ Pans and Pots Lid Organizer Rack Holder, Kitchen Cabinet Pantry Bakeware Organizer Rack Holder with 10 Adjustable Compartments (Grey)
+Score: 2.0301
+--------------------------------------------------
+Rank 22 (Recall Rank: 1193, Change: +1171)
+Product ID: 33505
+Title: Waffle Weave Valance for Kitchen or Bathroom - Cream, 60" W x 18" H
+Score: 2.0203
+--------------------------------------------------
+Rank 23 (Recall Rank: 1097, Change: +1074)
+Product ID: 66070
+Title: RUNCL Spinning Fishing Reel Merced 4000, Spinning Reel - 10+1 HPCR Ball Bearings, Multi-Disc Drag System, CNC Line Management, Smooth Operation, Braid-Ready Spool, Ergonomic Handle - Fishing Reel
+Score: 2.0191
+--------------------------------------------------
+Rank 24 (Recall Rank: 1043, Change: +1019)
+Product ID: 409
+Title: Huarache Press Quesadilla Tortilla Maker 12” Blue Heavy Duty Manual Homemade Tortillas
+Score: 2.0099
+--------------------------------------------------
+Rank 25 (Recall Rank: 1120, Change: +1095)
+Product ID: 603
+Title: VIVOHOME Double Burner Stove, Heavy Duty Outdoor Dual Propane with Windscreen and Detachable Legs Stand for Camping Cookout, Max. 150,000 total BTU/hr
+Score: 1.9938
+--------------------------------------------------
+Rank 26 (Recall Rank: 1068, Change: +1042)
+Product ID: 33238
+Title: Joyhalo Oven Mitts with Cotton Lining and Non Slip Silicone Stripes - 500 Degrees Heat Resistant Gloves for Oven, Grill, Flexible & Extra Long Kitchen Hot Pot Holder for Baking, Cooking, Wine
+Score: 1.9787
+--------------------------------------------------
+Rank 27 (Recall Rank: 1035, Change: +1008)
+Product ID: 379
+Title: Torani and DaVinci BLACK Syrup Pumps, Fits 25.4 Oz/750Ml Bottles (Pack of 2)
+Score: 1.9605
+--------------------------------------------------
+Rank 28 (Recall Rank: 978, Change: +950)
+Product ID: 131314
+Title: Mini Portable Washer and Spin Dryer-Super Energy Saving"40W",Small Foldable Blu-ray Washing Machine for Baby Clothes,Underwear,Sock in Travel Apartments,Fully Automatic
+Score: 1.9101
+--------------------------------------------------
+Rank 29 (Recall Rank: 1025, Change: +996)
+Product ID: 131423
+Title: Upower 2PCS Exhaust Tip 2.5" Inlet 2" x 6" Outlet 10" Long Rolled Rectangle Exhaust Tailpipe Tips Stainless Steel Polished Diesel Pipe Weld On
+Score: 1.9026
+--------------------------------------------------
+Rank 30 (Recall Rank: 1173, Change: +1143)
+Product ID: 33480
+Title: Anpro Grilling Accessories Grill Kit- Grill Set, Grilling Utensil Set, BBQ Accessories, BBQ Kit, BBQ Grill Tools, Grilling Gifts for Father's Day, Smoker, Camping, Kitchen,21 PCS-Standard
+Score: 1.8910
+--------------------------------------------------
+
+
+Summary
+====================================================================================================
+Total queries: 4
+Total results: 120
+Results per query: 30
+
+Average rank change: +594.73
+Positive changes (improved): 114
+Negative changes (worsened): 1
+No change: 0

@@ -1,3 +1,4 @@
+# use distilbert-BERT model for embedding
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import pandas as pd
@@ -110,6 +111,102 @@ def convert_embedding(product_parquet='versions/1/shopping_queries_dataset_produ
     file_list = glob.glob('query_*.csv')
     connect_csv(file_list, 'query.csv') # query + embedding
 
+    # Load the query-product match data
+    df_query_product_match = pd.read_csv(query_csv)
+    
+    # First, merge query embeddings with the original query-product match data
+    query_embed = pd.read_csv('query.csv')
+    print("Query embedding columns:", query_embed.columns.tolist())
+    print("Query-product match columns:", df_query_product_match.columns.tolist())
+    
+    # Ensure we have the correct columns for merging
+    query_match = df_query_product_match.merge(
+        query_embed[['query'] + [f'q{i}' for i in range(32)]],  # Explicitly select columns
+        on='query',
+        how='left'
+    )
+    
+    # Now merge with product embeddings
+    product_embed = pd.read_csv('product.csv')
+    print("Product embedding columns:", product_embed.columns.tolist())
+    
+    # Ensure product_id exists in both dataframes
+    if 'product_id' not in query_match.columns:
+        raise ValueError("product_id not found in query_match DataFrame")
+    if 'product_id' not in product_embed.columns:
+        raise ValueError("product_id not found in product_embed DataFrame")
+    
+    # Merge product embeddings with the query match data
+    data_df = product_embed.merge(
+        query_match,
+        on='product_id',
+        how='inner'
+    )
+    
+    # Add product title and description
+    df_products_title_description = df_products[['product_id', 'product_title', 'product_description']]
+    final_df = data_df.merge(
+        df_products_title_description,
+        on='product_id',
+        how='left'
+    )
+    
+    # Rearrange columns
+    # First, get all column names
+    all_columns = final_df.columns.tolist()
+    
+    # Define the desired order
+    # 1. Basic identifiers and metadata
+    basic_cols = ['product_id', 'query']
+    
+    # 2. Important labels and descriptions
+    label_cols = ['product_title', 'product_description', 'esci_label', 'split']
+    
+    # 3. User behavior columns
+    behavior_cols = [col for col in all_columns 
+                    if col.startswith('user_') or 
+                    col in ['click', 'purchase', 'cart', 'relevance']]
+    
+    # 4. Product metadata columns (excluding already placed columns)
+    product_meta_cols = [col for col in all_columns 
+                        if col.startswith('product_') 
+                        and col not in ['product_id', 'product_title', 'product_description']]
+    
+    # 5. Query metadata columns (excluding already placed columns)
+    query_meta_cols = [col for col in all_columns 
+                      if col.startswith('query_') 
+                      and col not in ['query']]
+    
+    # 6. Embedding columns
+    embedding_cols = [col for col in all_columns 
+                     if col.startswith('q') or col.startswith('p')]
+    
+    # Combine all column groups in the desired order
+    ordered_columns = (basic_cols + 
+                      label_cols +
+                      behavior_cols + 
+                      product_meta_cols + 
+                      query_meta_cols + 
+                      embedding_cols)
+    
+    # Ensure we haven't missed any columns
+    remaining_cols = [col for col in all_columns if col not in ordered_columns]
+    if remaining_cols:
+        print(f"Warning: Some columns were not explicitly ordered: {remaining_cols}")
+        ordered_columns.extend(remaining_cols)
+    
+    # Reorder the DataFrame
+    final_df = final_df[ordered_columns]
+    
+    # Save the final dataset
+    final_df.to_csv('query_data_full.csv', index=False)
+    
+    # Print column order for verification
+    print("\nFinal column order:")
+    for i, col in enumerate(final_df.columns):
+        print(f"{i+1}. {col}")
+    
+    return final_df
 
 def convert_query(input_query):
     'convert an input query list to embedding vector with default dim = 32'

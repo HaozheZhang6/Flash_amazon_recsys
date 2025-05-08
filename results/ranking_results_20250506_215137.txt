@@ -1,0 +1,621 @@
+Ranking Results
+================================================================================
+
+Query: wireless headphones
+--------------------------------------------------------------------------------
+Rank 1:
+Product ID: 111652
+Title: 3.5mm to RCA Cable, GearIT Pro Series 50 Feet Premium Gold Plated 3.5mm to RCA Audio Stereo Cable for Headphones, Home System, Car Stereo, iPods, iPhones, MP3 Players and More - Black
+Score: 2.5267
+----------------------------------------
+Rank 2:
+Product ID: 61483
+Title: USB C Charger, Anker Powerport Speed+ Duo Wall Charger with 30W Power Delivery Port for iPhone Xs/Max/XR/X/8, Ipad Pro 2018/Air 2/Mini, MacBook Pro/Air, Galaxy S10/S9/S8, Pixel, LG, Nexus, and More
+Score: 2.2739
+----------------------------------------
+Rank 3:
+Product ID: 141372
+Title: Multi-Device Bluetooth Keyboard, Jelly Comb Full Size Ultra Slim Rechargeable Wireless Bluetooth Keyboard Compatible for iPad, iPhone, MacBook, Android, Windows, iOS, Mac OS - Space Gray
+Score: 2.2568
+----------------------------------------
+Rank 4:
+Product ID: 61481
+Title: Anker PowerCore 20100 Power Bank with 4.8A Output and PowerIQ Technology, External Battery Pack for iPhone, iPad & Samsung Galaxy & More (Black) (Renewed)
+Score: 2.2326
+----------------------------------------
+Rank 5:
+Product ID: 6166
+Title: Sony SRF-M37W Walkman Digital Tuning Weather/FM/AM Stereo Radio (Black)
+Score: 2.0856
+----------------------------------------
+Rank 6:
+Product ID: 64561
+Title: SAMSUNG 15W Fast Charge 2.0 Wireless Charger Stand - White (US Version with Warranty
+Score: 2.0113
+----------------------------------------
+Rank 7:
+Product ID: 7216
+Title: Apple iPad Pro (12.9-inch, Wi-Fi + Cellular, 512GB) - Space Gray (3rd Generation)
+Score: 1.9717
+----------------------------------------
+Rank 8:
+Product ID: 34860
+Title: Apple iPhone 7, 128GB, Red - For AT&T / T-Mobile (Renewed)
+Score: 1.9432
+----------------------------------------
+Rank 9:
+Product ID: 34842
+Title: Apple iPhone 8, 64GB, Space Gray - For Sprint / Verizon (Renewed)
+Score: 1.9225
+----------------------------------------
+Rank 10:
+Product ID: 67618
+Title: Anker Roav Bluetooth Car Adapter and Car Charger, Power IQ 3.0 Type C PD, Bluetooth FM Transmitter for Car, Wireless Calling with Bluetooth 5.0, Noise Cancellation -T2
+Score: 1.8604
+----------------------------------------
+Rank 11:
+Product ID: 33816
+Title: Google Pixel XL (128GB, 4GB RAM) 5.5" AMOLED HD Display, Global 4G LTE US Factory Unlocked Model (GSM, Verizon, Sprint) - Quite Black
+Score: 1.8270
+----------------------------------------
+Rank 12:
+Product ID: 34835
+Title: Apple iPhone 8 Plus, 64GB, Silver - For AT&T / T-Mobile (Renewed)
+Score: 1.7497
+----------------------------------------
+Rank 13:
+Product ID: 111648
+Title: ENVEL 3.5mm Jack Cable Headset Adapter Kit Mutual Convertors for Laptop,Mac,PS4,Smartphone,Xbox One,Tablet Earphone with Headphone/Microphone Simultaneously Y Splitter Audio 2 Female to 1 Male
+Score: 1.7231
+----------------------------------------
+Rank 14:
+Product ID: 111649
+Title: ENVEL 3.5mm ジャックケーブル ヘッドセットアダプターキット 3極メスx2-4極オス CTIA ノートパソコン Mac PS5 PS4 スマートフォン Xbox One タブレットイヤホン用 ヘッドホン/マイク付き 同時にYスプリッターオーディオ メス2個からオス1個
+Score: 1.7231
+----------------------------------------
+Rank 15:
+Product ID: 61482
+Title: Anker Quick Charge 3.0 43.5W 4-Port USB Wall Charger, PowerPort Speed 4 for Galaxy S7/S6/edge/edge+, Note 4/5, LG G4/G5, HTC One M8/M9/A9, Nexus 6, with PowerIQ for iPhone 7, iPad, and More
+Score: 1.7216
+----------------------------------------
+Rank 16:
+Product ID: 7217
+Title: Apple iPad Air (10.5-inch, Wi-Fi + Cellular, 64GB) - Gold (3rd Generation)
+Score: 1.6821
+----------------------------------------
+Rank 17:
+Product ID: 6188
+Title: TaoTronics Computer Speakers, Wired Computer Sound Bar, Stereo USB Powered Mini Soundbar Speaker for PC Tablets Desktop Cellphone Laptop(Upgrade), Black (TT-SK018new)
+Score: 1.6050
+----------------------------------------
+Rank 18:
+Product ID: 34841
+Title: Apple iPhone 8, Fully Unlocked, 256GB - Silver (Renewed)
+Score: 1.5854
+----------------------------------------
+Rank 19:
+Product ID: 34840
+Title: (Renewed) Apple iPhone 8 Plus, US Version, 64GB, Gold - Unlocked
+Score: 1.5333
+----------------------------------------
+Rank 20:
+Product ID: 67619
+Title: AINOPE Fm Transmitter Bluetooth Car Adapter, 36W/6A PD&QC3.0 Bluetooth Radio Transmitter Car Adapter, 7-Colors LED Backlit V5.0 Bluetooth Adapter Car, Wireless Call, Noise Cancellation
+Score: 1.4889
+----------------------------------------
+Rank 21:
+Product ID: 6164
+Title: Sony STRDH590 5.2 Channel Surround Sound Home Theater Receiver: 4K HDR AV Receiver with Bluetooth,Black
+Score: 1.4728
+----------------------------------------
+Rank 22:
+Product ID: 72760
+Title: SAMSUNG Galaxy S9 G960U 64GB Unlocked GSM 4G LTE Phone w/ 12MP Camera - Midnight Black
+Score: 1.2971
+----------------------------------------
+Rank 23:
+Product ID: 6161
+Title: Sony FDRAX53/B 4K HD Video Recording Camcorder (Black)
+Score: 1.2433
+----------------------------------------
+Rank 24:
+Product ID: 72736
+Title: Samsung Galaxy A10s with Fingerprint (32GB, 2GB RAM) 6.2", Android 9.0, Dual SIM GSM Factory Unlocked A107M/DS - US + Global 4G LTE International Model (Black, 32GB + 64GB SD Bundle)
+Score: 1.1709
+----------------------------------------
+Rank 25:
+Product ID: 61485
+Title: Anker PowerCore Lite 20000mAh Portable Charger, Ultra-High Capacity 4.8A Output Power Bank, External Battery
+Score: 1.1570
+----------------------------------------
+Rank 26:
+Product ID: 52272
+Title: Apple Lightning to USB Cable (1 m)
+Score: 1.1174
+----------------------------------------
+Rank 27:
+Product ID: 142402
+Title: 4K HDMI 2.0 Audio Extractor, HDMI to HDMI + Optical Toslink SPDIF + 3.5mm L/R AUX Stereo Audio Out HDMI Audio Adapter Support 4K@60Hz HDR HDCP2.2 EDID ARC for Speaker Amplifier Soundbar
+Score: 1.0646
+----------------------------------------
+Rank 28:
+Product ID: 72711
+Title: Samsung Galaxy A10s with Fingerprint (32GB, 2GB RAM) 6.2", Android 9.0, Dual SIM GSM Factory Unlocked A107M/DS - US + Global 4G LTE International Model (Blue, 32GB + 64GB SD Bundle)
+Score: 1.0574
+----------------------------------------
+Rank 29:
+Product ID: 103493
+Title: XIRON Paperfeel Screen Protector Compatible with iPad Pro 12.9 (2021&2020&2018), High Touch Sensitivity No Glare Scratch for iPad Pro 12.9 Matte Screen Protector, Compatible with Apple Pencil
+Score: 1.0471
+----------------------------------------
+Rank 30:
+Product ID: 72708
+Title: TracFone Carrier-Locked Samsung Galaxy J7 Crown 4G LTE Prepaid Smartphone - Black - 16GB - Sim Card Included - CDMA
+Score: 1.0466
+----------------------------------------
+
+Query: running shoes for men
+--------------------------------------------------------------------------------
+Rank 1:
+Product ID: 18479
+Title: MIUZOOE Women Lace Babydoll Lingerie Sheer Mesh Chemise Open Back Sleepwear (Black, L)
+Score: 1.1760
+----------------------------------------
+Rank 2:
+Product ID: 70701
+Title: Calvin Klein Men's Cotton Stretch Multipack Boxer Briefs, Black, Medium
+Score: 1.1200
+----------------------------------------
+Rank 3:
+Product ID: 29730
+Title: MELERIO Women's Slip Shorts, Comfortable Boyshorts Panties, Anti-chafing Spandex Shorts for Under Dress (White, 2XL)
+Score: 1.0893
+----------------------------------------
+Rank 4:
+Product ID: 85035
+Title: Dreamgirl Women's Working Girl Slip, Black, One Size
+Score: 1.0851
+----------------------------------------
+Rank 5:
+Product ID: 58388
+Title: Avidlove Sexy Babydoll Lingerie for Women Lace Chemise Nightgowns Wedding Nightie Black, XL
+Score: 1.0382
+----------------------------------------
+Rank 6:
+Product ID: 41985
+Title: SweatyRocks Women's Summer Short Sleeve Tee Distressed Ripped Crop T-shirt Tops Black M
+Score: 0.9480
+----------------------------------------
+Rank 7:
+Product ID: 42006
+Title: SweatyRocks Women's Elegant High Waist Skirt Tie Front Pleated Maxi Skirts Burgundy XL
+Score: 0.9422
+----------------------------------------
+Rank 8:
+Product ID: 8258
+Title: YeMgSiP Womens Sweater Dresses Deep V Neck Batwing Sleeve Wrap Sexy Backless Mini Bodycon Dress with Belt Blue
+Score: 0.9094
+----------------------------------------
+Rank 9:
+Product ID: 96334
+Title: Sexy Long Coat Fitted Suits Jackets Long Sleeve Work Tassel Blazer Dress Black L
+Score: 0.9046
+----------------------------------------
+Rank 10:
+Product ID: 73845
+Title: Calvin Klein Girls' Big Performance Short Sleeve Tee Shirt, Boat Black, L12/14
+Score: 0.7504
+----------------------------------------
+Rank 11:
+Product ID: 5194
+Title: Women's Black Tunic Tops for Leggings Long Sleeve Shirts V Neck Botton Up Casual Plus Size Blouses 2x
+Score: 0.6915
+----------------------------------------
+Rank 12:
+Product ID: 85020
+Title: Lace Bodysuit for Women Sexy Eyelash Teddy Lingerie Naughty Negligee Black Bodysuit, White, Medium
+Score: 0.6682
+----------------------------------------
+Rank 13:
+Product ID: 75781
+Title: Nike Toddler Girl's Tempo Dri-Fit Running Shorts-Racer Pink-2T
+Score: 0.6681
+----------------------------------------
+Rank 14:
+Product ID: 108589
+Title: BTFBM Women's V-Neck Short Sleeve Dresses Solid Color Casual Loose Fit T-Shirt Tunic Short Dress Pajamas Striped Print(Grey, XX-Large)
+Score: 0.6679
+----------------------------------------
+Rank 15:
+Product ID: 70700
+Title: Calvin Klein Men's Underwear Cotton Classics Boxer Briefs - Medium - Black (Pack of 3)
+Score: 0.6673
+----------------------------------------
+Rank 16:
+Product ID: 96361
+Title: Women's Waffle Knit V Neck Henley Tops Casual Long Sleeve Pullover Sweater Blouses Black
+Score: 0.6669
+----------------------------------------
+Rank 17:
+Product ID: 25707
+Title: Avidlove Sleepwear for Women Tank Nightgown Chemise Racerback Sleeveless Sleep Dress Black
+Score: 0.6019
+----------------------------------------
+Rank 18:
+Product ID: 120869
+Title: Signature by Levi Strauss & Co. Gold Label Boys' Skinny Fit Jeans, gothic, 14
+Score: 0.5888
+----------------------------------------
+Rank 19:
+Product ID: 45109
+Title: Calvin Klein Women's Long Sleeve Shift with Tie Neck, Red, 4 Petite
+Score: 0.5802
+----------------------------------------
+Rank 20:
+Product ID: 6249
+Title: Happy Sailed Womens V Neck Lace Cami Tank Tops Summer Sleeveless Racerback Camisole Shirts Wine X-Large
+Score: 0.5492
+----------------------------------------
+Rank 21:
+Product ID: 6248
+Title: Women's Sexy V Neck Backless Camisole Spaghetti Strap Tank Top(M,Black)
+Score: 0.5371
+----------------------------------------
+Rank 22:
+Product ID: 102468
+Title: Bluetime Women Off The Shoulder Tops Summer Short Sleeve Chiffon Blouses Ruffles Sexy Tee Shirts (S, White)
+Score: 0.5141
+----------------------------------------
+Rank 23:
+Product ID: 36965
+Title: Tutorutor Womens Color Block Pullover Sweaters Oversized Chunky Striped Turtleneck Batwing Long Sleeve Loose Knit Jumper Blue
+Score: 0.4992
+----------------------------------------
+Rank 24:
+Product ID: 27669
+Title: Womens Sexy Summer Two Piece Outfits - Chiffon Pleated Halter Neck Sleeveless Crop Top and Flowy Skirts Sets Party Beach Sundress Yellow S
+Score: 0.4555
+----------------------------------------
+Rank 25:
+Product ID: 45124
+Title: Tempt Me Women Red One Piece Bathing Suit Crisscross Lace Up Sexy Swimsuits M
+Score: 0.4351
+----------------------------------------
+Rank 26:
+Product ID: 139270
+Title: Allegra K Women's Faux Suede Button Closure Fall Winter High Waisted Cute Mini Short Skirt X-Large Brown
+Score: 0.4113
+----------------------------------------
+Rank 27:
+Product ID: 108584
+Title: Calvin Klein Women's Invisibles Lightly Lined T-Shirt Bra, Wild Fern, 32C
+Score: 0.3380
+----------------------------------------
+Rank 28:
+Product ID: 66670
+Title: REDPAI Women's Sports Bras High Impact Full Coverage Support Racerback Yoga Bras Wirefree Workout Tank Top Fitness Black
+Score: 0.2327
+----------------------------------------
+Rank 29:
+Product ID: 102412
+Title: Signature by Levi Strauss & Co. Gold Label Women's Totally Shaping Slim Straight Jeans (Standard and Plus), Perfection, 14
+Score: 0.2184
+----------------------------------------
+Rank 30:
+Product ID: 30743
+Title: Womens Casual Work Office Open Front Blazer Jacket with Removable Shoulder Pads JK1133 Black Large
+Score: 0.0449
+----------------------------------------
+
+Query: smartphone charger
+--------------------------------------------------------------------------------
+Rank 1:
+Product ID: 61483
+Title: USB C Charger, Anker Powerport Speed+ Duo Wall Charger with 30W Power Delivery Port for iPhone Xs/Max/XR/X/8, Ipad Pro 2018/Air 2/Mini, MacBook Pro/Air, Galaxy S10/S9/S8, Pixel, LG, Nexus, and More
+Score: 2.9260
+----------------------------------------
+Rank 2:
+Product ID: 67618
+Title: Anker Roav Bluetooth Car Adapter and Car Charger, Power IQ 3.0 Type C PD, Bluetooth FM Transmitter for Car, Wireless Calling with Bluetooth 5.0, Noise Cancellation -T2
+Score: 2.4326
+----------------------------------------
+Rank 3:
+Product ID: 6188
+Title: TaoTronics Computer Speakers, Wired Computer Sound Bar, Stereo USB Powered Mini Soundbar Speaker for PC Tablets Desktop Cellphone Laptop(Upgrade), Black (TT-SK018new)
+Score: 2.4077
+----------------------------------------
+Rank 4:
+Product ID: 61481
+Title: Anker PowerCore 20100 Power Bank with 4.8A Output and PowerIQ Technology, External Battery Pack for iPhone, iPad & Samsung Galaxy & More (Black) (Renewed)
+Score: 2.3217
+----------------------------------------
+Rank 5:
+Product ID: 64561
+Title: SAMSUNG 15W Fast Charge 2.0 Wireless Charger Stand - White (US Version with Warranty
+Score: 2.3189
+----------------------------------------
+Rank 6:
+Product ID: 111649
+Title: ENVEL 3.5mm ジャックケーブル ヘッドセットアダプターキット 3極メスx2-4極オス CTIA ノートパソコン Mac PS5 PS4 スマートフォン Xbox One タブレットイヤホン用 ヘッドホン/マイク付き 同時にYスプリッターオーディオ メス2個からオス1個
+Score: 2.3021
+----------------------------------------
+Rank 7:
+Product ID: 111648
+Title: ENVEL 3.5mm Jack Cable Headset Adapter Kit Mutual Convertors for Laptop,Mac,PS4,Smartphone,Xbox One,Tablet Earphone with Headphone/Microphone Simultaneously Y Splitter Audio 2 Female to 1 Male
+Score: 2.3021
+----------------------------------------
+Rank 8:
+Product ID: 61482
+Title: Anker Quick Charge 3.0 43.5W 4-Port USB Wall Charger, PowerPort Speed 4 for Galaxy S7/S6/edge/edge+, Note 4/5, LG G4/G5, HTC One M8/M9/A9, Nexus 6, with PowerIQ for iPhone 7, iPad, and More
+Score: 2.2535
+----------------------------------------
+Rank 9:
+Product ID: 111652
+Title: 3.5mm to RCA Cable, GearIT Pro Series 50 Feet Premium Gold Plated 3.5mm to RCA Audio Stereo Cable for Headphones, Home System, Car Stereo, iPods, iPhones, MP3 Players and More - Black
+Score: 2.1726
+----------------------------------------
+Rank 10:
+Product ID: 141372
+Title: Multi-Device Bluetooth Keyboard, Jelly Comb Full Size Ultra Slim Rechargeable Wireless Bluetooth Keyboard Compatible for iPad, iPhone, MacBook, Android, Windows, iOS, Mac OS - Space Gray
+Score: 2.0734
+----------------------------------------
+Rank 11:
+Product ID: 6166
+Title: Sony SRF-M37W Walkman Digital Tuning Weather/FM/AM Stereo Radio (Black)
+Score: 2.0680
+----------------------------------------
+Rank 12:
+Product ID: 61485
+Title: Anker PowerCore Lite 20000mAh Portable Charger, Ultra-High Capacity 4.8A Output Power Bank, External Battery
+Score: 1.9767
+----------------------------------------
+Rank 13:
+Product ID: 67619
+Title: AINOPE Fm Transmitter Bluetooth Car Adapter, 36W/6A PD&QC3.0 Bluetooth Radio Transmitter Car Adapter, 7-Colors LED Backlit V5.0 Bluetooth Adapter Car, Wireless Call, Noise Cancellation
+Score: 1.9011
+----------------------------------------
+Rank 14:
+Product ID: 52272
+Title: Apple Lightning to USB Cable (1 m)
+Score: 1.6555
+----------------------------------------
+Rank 15:
+Product ID: 34860
+Title: Apple iPhone 7, 128GB, Red - For AT&T / T-Mobile (Renewed)
+Score: 1.4775
+----------------------------------------
+Rank 16:
+Product ID: 6164
+Title: Sony STRDH590 5.2 Channel Surround Sound Home Theater Receiver: 4K HDR AV Receiver with Bluetooth,Black
+Score: 1.4395
+----------------------------------------
+Rank 17:
+Product ID: 33816
+Title: Google Pixel XL (128GB, 4GB RAM) 5.5" AMOLED HD Display, Global 4G LTE US Factory Unlocked Model (GSM, Verizon, Sprint) - Quite Black
+Score: 1.4355
+----------------------------------------
+Rank 18:
+Product ID: 7216
+Title: Apple iPad Pro (12.9-inch, Wi-Fi + Cellular, 512GB) - Space Gray (3rd Generation)
+Score: 1.3936
+----------------------------------------
+Rank 19:
+Product ID: 34842
+Title: Apple iPhone 8, 64GB, Space Gray - For Sprint / Verizon (Renewed)
+Score: 1.3486
+----------------------------------------
+Rank 20:
+Product ID: 61486
+Title: Anker USB C Hub Adapter, 5-in-1 USB C Adapter with 4K USB C to HDMI, Ethernet Port, 3 USB 3.0 Ports, for MacBook Pro, iPad Pro, XPS, Pixelbook, and More
+Score: 1.3288
+----------------------------------------
+Rank 21:
+Product ID: 34835
+Title: Apple iPhone 8 Plus, 64GB, Silver - For AT&T / T-Mobile (Renewed)
+Score: 1.1511
+----------------------------------------
+Rank 22:
+Product ID: 7217
+Title: Apple iPad Air (10.5-inch, Wi-Fi + Cellular, 64GB) - Gold (3rd Generation)
+Score: 1.1435
+----------------------------------------
+Rank 23:
+Product ID: 72760
+Title: SAMSUNG Galaxy S9 G960U 64GB Unlocked GSM 4G LTE Phone w/ 12MP Camera - Midnight Black
+Score: 1.1006
+----------------------------------------
+Rank 24:
+Product ID: 142402
+Title: 4K HDMI 2.0 Audio Extractor, HDMI to HDMI + Optical Toslink SPDIF + 3.5mm L/R AUX Stereo Audio Out HDMI Audio Adapter Support 4K@60Hz HDR HDCP2.2 EDID ARC for Speaker Amplifier Soundbar
+Score: 1.0567
+----------------------------------------
+Rank 25:
+Product ID: 34817
+Title: for iPhone 7 Plus Screen Replacement 5.5 Inch White, Diykitpl 3D Touch LCD Screen Digitizer Replacement for A1661,A1784,A1785, with Repair Tools Kit+Magnetic Screw Mats+Screen Protector
+Score: 1.0535
+----------------------------------------
+Rank 26:
+Product ID: 29716
+Title: iPhone Charger Block, Plug in Phone Charger, Sicodo 4Pack Single Port USB Wall Charger Fast Charging Adapter Cube Box for iPhone 12 SE(2020) 11/11pro/XS/XS Max/XR/X, Samsung Galaxy S21/S20+/10, LG
+Score: 0.9451
+----------------------------------------
+Rank 27:
+Product ID: 103493
+Title: XIRON Paperfeel Screen Protector Compatible with iPad Pro 12.9 (2021&2020&2018), High Touch Sensitivity No Glare Scratch for iPad Pro 12.9 Matte Screen Protector, Compatible with Apple Pencil
+Score: 0.9017
+----------------------------------------
+Rank 28:
+Product ID: 72736
+Title: Samsung Galaxy A10s with Fingerprint (32GB, 2GB RAM) 6.2", Android 9.0, Dual SIM GSM Factory Unlocked A107M/DS - US + Global 4G LTE International Model (Black, 32GB + 64GB SD Bundle)
+Score: 0.8403
+----------------------------------------
+Rank 29:
+Product ID: 72711
+Title: Samsung Galaxy A10s with Fingerprint (32GB, 2GB RAM) 6.2", Android 9.0, Dual SIM GSM Factory Unlocked A107M/DS - US + Global 4G LTE International Model (Blue, 32GB + 64GB SD Bundle)
+Score: 0.7090
+----------------------------------------
+Rank 30:
+Product ID: 72708
+Title: TracFone Carrier-Locked Samsung Galaxy J7 Crown 4G LTE Prepaid Smartphone - Black - 16GB - Sim Card Included - CDMA
+Score: 0.6510
+----------------------------------------
+
+Query: fashionable dress
+--------------------------------------------------------------------------------
+Rank 1:
+Product ID: 102412
+Title: Signature by Levi Strauss & Co. Gold Label Women's Totally Shaping Slim Straight Jeans (Standard and Plus), Perfection, 14
+Score: 2.2101
+----------------------------------------
+Rank 2:
+Product ID: 18479
+Title: MIUZOOE Women Lace Babydoll Lingerie Sheer Mesh Chemise Open Back Sleepwear (Black, L)
+Score: 2.1652
+----------------------------------------
+Rank 3:
+Product ID: 85020
+Title: Lace Bodysuit for Women Sexy Eyelash Teddy Lingerie Naughty Negligee Black Bodysuit, White, Medium
+Score: 2.1283
+----------------------------------------
+Rank 4:
+Product ID: 85035
+Title: Dreamgirl Women's Working Girl Slip, Black, One Size
+Score: 2.0346
+----------------------------------------
+Rank 5:
+Product ID: 45109
+Title: Calvin Klein Women's Long Sleeve Shift with Tie Neck, Red, 4 Petite
+Score: 2.0037
+----------------------------------------
+Rank 6:
+Product ID: 96334
+Title: Sexy Long Coat Fitted Suits Jackets Long Sleeve Work Tassel Blazer Dress Black L
+Score: 1.9999
+----------------------------------------
+Rank 7:
+Product ID: 58388
+Title: Avidlove Sexy Babydoll Lingerie for Women Lace Chemise Nightgowns Wedding Nightie Black, XL
+Score: 1.9303
+----------------------------------------
+Rank 8:
+Product ID: 73845
+Title: Calvin Klein Girls' Big Performance Short Sleeve Tee Shirt, Boat Black, L12/14
+Score: 1.8707
+----------------------------------------
+Rank 9:
+Product ID: 108584
+Title: Calvin Klein Women's Invisibles Lightly Lined T-Shirt Bra, Wild Fern, 32C
+Score: 1.8584
+----------------------------------------
+Rank 10:
+Product ID: 45124
+Title: Tempt Me Women Red One Piece Bathing Suit Crisscross Lace Up Sexy Swimsuits M
+Score: 1.8319
+----------------------------------------
+Rank 11:
+Product ID: 41985
+Title: SweatyRocks Women's Summer Short Sleeve Tee Distressed Ripped Crop T-shirt Tops Black M
+Score: 1.8319
+----------------------------------------
+Rank 12:
+Product ID: 6249
+Title: Happy Sailed Womens V Neck Lace Cami Tank Tops Summer Sleeveless Racerback Camisole Shirts Wine X-Large
+Score: 1.8266
+----------------------------------------
+Rank 13:
+Product ID: 29730
+Title: MELERIO Women's Slip Shorts, Comfortable Boyshorts Panties, Anti-chafing Spandex Shorts for Under Dress (White, 2XL)
+Score: 1.8142
+----------------------------------------
+Rank 14:
+Product ID: 70700
+Title: Calvin Klein Men's Underwear Cotton Classics Boxer Briefs - Medium - Black (Pack of 3)
+Score: 1.8138
+----------------------------------------
+Rank 15:
+Product ID: 70701
+Title: Calvin Klein Men's Cotton Stretch Multipack Boxer Briefs, Black, Medium
+Score: 1.7819
+----------------------------------------
+Rank 16:
+Product ID: 102468
+Title: Bluetime Women Off The Shoulder Tops Summer Short Sleeve Chiffon Blouses Ruffles Sexy Tee Shirts (S, White)
+Score: 1.7808
+----------------------------------------
+Rank 17:
+Product ID: 25707
+Title: Avidlove Sleepwear for Women Tank Nightgown Chemise Racerback Sleeveless Sleep Dress Black
+Score: 1.7608
+----------------------------------------
+Rank 18:
+Product ID: 96361
+Title: Women's Waffle Knit V Neck Henley Tops Casual Long Sleeve Pullover Sweater Blouses Black
+Score: 1.7524
+----------------------------------------
+Rank 19:
+Product ID: 5194
+Title: Women's Black Tunic Tops for Leggings Long Sleeve Shirts V Neck Botton Up Casual Plus Size Blouses 2x
+Score: 1.6640
+----------------------------------------
+Rank 20:
+Product ID: 8258
+Title: YeMgSiP Womens Sweater Dresses Deep V Neck Batwing Sleeve Wrap Sexy Backless Mini Bodycon Dress with Belt Blue
+Score: 1.6374
+----------------------------------------
+Rank 21:
+Product ID: 120869
+Title: Signature by Levi Strauss & Co. Gold Label Boys' Skinny Fit Jeans, gothic, 14
+Score: 1.6323
+----------------------------------------
+Rank 22:
+Product ID: 42006
+Title: SweatyRocks Women's Elegant High Waist Skirt Tie Front Pleated Maxi Skirts Burgundy XL
+Score: 1.5899
+----------------------------------------
+Rank 23:
+Product ID: 27669
+Title: Womens Sexy Summer Two Piece Outfits - Chiffon Pleated Halter Neck Sleeveless Crop Top and Flowy Skirts Sets Party Beach Sundress Yellow S
+Score: 1.5777
+----------------------------------------
+Rank 24:
+Product ID: 139270
+Title: Allegra K Women's Faux Suede Button Closure Fall Winter High Waisted Cute Mini Short Skirt X-Large Brown
+Score: 1.4887
+----------------------------------------
+Rank 25:
+Product ID: 108589
+Title: BTFBM Women's V-Neck Short Sleeve Dresses Solid Color Casual Loose Fit T-Shirt Tunic Short Dress Pajamas Striped Print(Grey, XX-Large)
+Score: 1.4796
+----------------------------------------
+Rank 26:
+Product ID: 6248
+Title: Women's Sexy V Neck Backless Camisole Spaghetti Strap Tank Top(M,Black)
+Score: 1.2497
+----------------------------------------
+Rank 27:
+Product ID: 36965
+Title: Tutorutor Womens Color Block Pullover Sweaters Oversized Chunky Striped Turtleneck Batwing Long Sleeve Loose Knit Jumper Blue
+Score: 1.2461
+----------------------------------------
+Rank 28:
+Product ID: 48188
+Title: Loose Fitting Tops for Women Short Sleeve Pleated Casual T-Shirts Summer Tunics 2XL,Black
+Score: 1.2140
+----------------------------------------
+Rank 29:
+Product ID: 50253
+Title: Hanes Ultimate ComfortBlend T-Shirt Wirefree Bra White
+Score: 1.0939
+----------------------------------------
+Rank 30:
+Product ID: 30743
+Title: Womens Casual Work Office Open Front Blazer Jacket with Removable Shoulder Pads JK1133 Black Large
+Score: 1.0064
+----------------------------------------
+
+
+Summary
+================================================================================
+Total queries: 4
+Total results: 120
+Results per query: 30

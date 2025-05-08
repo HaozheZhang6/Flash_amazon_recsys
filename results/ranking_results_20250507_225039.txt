@@ -1,0 +1,626 @@
+Ranking Results with Recall Comparison
+====================================================================================================
+
+Query: bluetooth earphones
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: N/A, Change: N/A)
+Product ID: 115358
+Title: Anker Wireless Charger, 313 Wireless Charger (Stand), Qi-Certified for iPhone 12, 12 mini, 12 Pro Max, SE, 11, 11 Pro, 11 Pro Max, XR, XS Max, 10W Fast-Charging Galaxy S20, S10 (No AC Adapter)
+Score: 1.8816
+--------------------------------------------------
+Rank 2 (Recall Rank: N/A, Change: N/A)
+Product ID: 115357
+Title: Anker Wireless Chargers Bundle, PowerWave Pad & Stand Upgraded, Qi-Certified, Fast Charging iPhone 12, 12 Mini, 12 Pro, Max, SE, 11, 11 Pro, 11 Pro Max, Xs Max, Galaxy S20, Note 10 (No AC Adapter)
+Score: 1.6197
+--------------------------------------------------
+Rank 3 (Recall Rank: 296, Change: +293)
+Product ID: 131919
+Title: Spigen Ultra Hybrid [Anti-Yellowing PC Back] [Military Grade] Designed for iPhone XR Case, 6.1 inch Cover - Crystal Clear
+Score: 1.5865
+--------------------------------------------------
+Rank 4 (Recall Rank: 295, Change: +291)
+Product ID: 131918
+Title: Spigen Funda Ultra Hybrid Compatible con iPhone XR - Transparente
+Score: 1.5865
+--------------------------------------------------
+Rank 5 (Recall Rank: 294, Change: +289)
+Product ID: 131917
+Title: Spigen iPhone XR ケース 6.1インチ 対応 クリア 米軍MIL規格取得 耐衝撃 カメラ保護 衝撃吸収 Qi充電 ワイヤレス充電 ウルトラ・ハイブリッド 064CS24873 (クリスタル・クリア)
+Score: 1.5865
+--------------------------------------------------
+Rank 6 (Recall Rank: N/A, Change: N/A)
+Product ID: 654
+Title: SAMSUNG Galaxy Watch Active 2 (44mm, GPS, Bluetooth) Smart Watch with Advanced Health Monitoring, Fitness Tracking, and Long lasting Battery, Silver (US Version)
+Score: 1.4719
+--------------------------------------------------
+Rank 7 (Recall Rank: N/A, Change: N/A)
+Product ID: 653
+Title: Samsung Galaxy Watch Active2 Aluminum 44mm (Bluetooth) [Galaxy純正 並行輸入品] SM-R820NZSATGY (CLOUD SILVER/クラウドシルバー)
+Score: 1.4719
+--------------------------------------------------
+Rank 8 (Recall Rank: 193, Change: +185)
+Product ID: 718
+Title: Anker Powercore II 10000, Ultra-Compact 10000mAh Portable Charger, Upgraded Poweriq 2.0 (up to 18W Output), Fast Charge for iPhone, Samsung Galaxy and More (Compatible with Quick Charge Devices)
+Score: 1.3740
+--------------------------------------------------
+Rank 9 (Recall Rank: 192, Change: +183)
+Product ID: 717
+Title: Anker PowerCore II 10000 (モバイルバッテリー 10000mAh 大容量) 【PSE技術基準適合/PowerIQ 2.0搭載 / LED Wheel】iPhone&Android対応(ブラック)
+Score: 1.3740
+--------------------------------------------------
+Rank 10 (Recall Rank: 71, Change: +61)
+Product ID: 49502
+Title: OV LED 802100 Broadbeam LED Headlamp, Ultra-Low Profile Durable Elastic Headband, 210° Illumination, 300 Lumens, 20 Bright LED Lights, 3 AAA Battery Powered, 3 Power Settings
+Score: 1.3462
+--------------------------------------------------
+Rank 11 (Recall Rank: 164, Change: +153)
+Product ID: 667
+Title: 【Spigen】 iPhone 11 ケース 6.1インチ 対応 超耐衝撃 新モデル スタンド機能 米軍MIL規格取得 カメラ保護 傷防止 衝撃 吸収 Qi充電 ワイヤレス充電 タフ・アーマー XP 076CS27439 (ブラック)
+Score: 1.3360
+--------------------------------------------------
+Rank 12 (Recall Rank: 165, Change: +153)
+Product ID: 668
+Title: Spigen Tough Armor Designed for iPhone 11 Case (2019) - XP Black
+Score: 1.3360
+--------------------------------------------------
+Rank 13 (Recall Rank: 256, Change: +243)
+Product ID: 807
+Title: Spigen Rugged Armor Protector Compatible with Apple Watch Case Series 7/6/SE/5/4 (45mm/44mm) - White
+Score: 1.3084
+--------------------------------------------------
+Rank 14 (Recall Rank: 255, Change: +241)
+Product ID: 806
+Title: Spigen Apple Watch ケース 45mm | 44mm 【 Series 7 / Series SE/Series 6 / Series 5 / Series 4 対応 】 落下 衝撃 吸収 タフネスデザイン 保護カバー アップルウォッチケース ラギッド・アーマー 062CS24471 (ホワイト)
+Score: 1.3084
+--------------------------------------------------
+Rank 15 (Recall Rank: N/A, Change: N/A)
+Product ID: 115449
+Title: OCOMMO Upgraded 2 in 1 Wireless Charger for Apple Watch 5,4,3,2,1, iPhone 11, 11 PRO, 11 MAX PRO, XS MAX, XR, XS, 8Plus, iPhone and Watch Charging Station (QC 3.0 Adapter Included), White
+Score: 1.1528
+--------------------------------------------------
+Rank 16 (Recall Rank: 81, Change: +65)
+Product ID: 8582
+Title: Adonit Snap 2 Bluetooth Selfie Touch Pen with Remote Shutter with Magnetic Strip Stylus Compatible for iPhone 13/13 Pro Max/ 13 Pro/12/12 Pro MAX/11/X/XR/8/8Plus, Samsung Galaxy/Fold/Flip/Note/S -Pink
+Score: 1.1302
+--------------------------------------------------
+Rank 17 (Recall Rank: 252, Change: +235)
+Product ID: 803
+Title: Spigen Rugged Armor Pro Compatible with Apple Watch Band with Case for Series 7 (45mm) and Series 6/SE/5/4 (44mm) - Black
+Score: 1.0959
+--------------------------------------------------
+Rank 18 (Recall Rank: 251, Change: +233)
+Product ID: 802
+Title: Spigen Apple Watch バンド Series 7 45mm / 44mm 一体型 ケース カバー 耐衝撃 PC TPU 二重構造 スポーツバンド 落下 衝撃 吸収 耐久性 傷防止 Series 7 / SE/Series 6 / Series 5 / Series 4 対応 ラギッド・アーマー プロ 062CS25324 (ブラック)
+Score: 1.0959
+--------------------------------------------------
+Rank 19 (Recall Rank: 231, Change: +212)
+Product ID: 782
+Title: 三菱鉛筆 水性ペン ポスカ 中字 丸芯 7色 PC5M7C
+Score: 1.0869
+--------------------------------------------------
+Rank 20 (Recall Rank: 232, Change: +212)
+Product ID: 783
+Title: uni Posca Paint Marker Pen, Medium Point, Set of 7 Natural Color (PC-5M 7C), Pastel Yellow, Pastel Orange, Pastel Green, Pastel Purple, Sky Blue, Light Pink, Coral Pink
+Score: 1.0869
+--------------------------------------------------
+Rank 21 (Recall Rank: 97, Change: +76)
+Product ID: 41422
+Title: WD ポータブルSSD 1TB USB3.0 ブルー My Passport Go 外付け / 3年保証 【PS4 / Xbox Oneメーカー動作確認済】WDBMCG0010BBT-WESN
+Score: 1.0518
+--------------------------------------------------
+Rank 22 (Recall Rank: 96, Change: +74)
+Product ID: 41421
+Title: Western Digital 1TB My Passport Go SSD Cobalt Portable External Storage, USB 3.0 - Western DigitalBMCG0010BBT-WESN
+Score: 1.0518
+--------------------------------------------------
+Rank 23 (Recall Rank: 210, Change: +187)
+Product ID: 58097
+Title: WiFi Otoscope, Ear Endoscope Camera, 1.3 MP WiFi USB Ear Scope Cleaning Endoscope,Wireless Digital Inspection Otoscope with 6 Adjustable LED Lights for Android
+Score: 0.9894
+--------------------------------------------------
+Rank 24 (Recall Rank: 161, Change: +137)
+Product ID: 664
+Title: i-Blason Cosmo Full-Body Case for iPhone Xs/ iPhone X Case 2018 Release, Marble, 5.8"
+Score: 0.9791
+--------------------------------------------------
+Rank 25 (Recall Rank: 160, Change: +135)
+Product ID: 663
+Title: i-Blason iPhone XS ケース，iPhone X ケース， 液晶保護フレーム付き 米軍MIL規格取得 耐衝撃 防塵デザイン (2018 Release)
+Score: 0.9791
+--------------------------------------------------
+Rank 26 (Recall Rank: 240, Change: +214)
+Product ID: 790
+Title: Amazonベーシック 3段ユニットシェルフ 金属製 ワイヤーラック ブラック
+Score: 0.8420
+--------------------------------------------------
+Rank 27 (Recall Rank: 241, Change: +214)
+Product ID: 791
+Title: Amazon Basics 3-Shelf Adjustable, Heavy Duty Storage Shelving Unit (250 lbs loading capacity per shelf), Steel Organizer Wire Rack, Black (23.3L x 13.4W x 30H)
+Score: 0.8420
+--------------------------------------------------
+Rank 28 (Recall Rank: 103, Change: +75)
+Product ID: 57847
+Title: Apple iPhone 6s Plus (32GB) - Rose Gold
+Score: 0.8260
+--------------------------------------------------
+Rank 29 (Recall Rank: 119, Change: +90)
+Product ID: 8742
+Title: Amazon Basics USB A Cable with Lightning Connector, Premium Collection, MFi Certified Apple iPhone Charger, 10 Foot, Red
+Score: 0.7821
+--------------------------------------------------
+Rank 30 (Recall Rank: 247, Change: +217)
+Product ID: 798
+Title: 【Spigen】 Galaxy S9 ケース [ SC-02K SCV38 ] 対応 TPU 米軍MIL規格取得 マット仕上げ ラギッド・アーマー 592CS22834 (マット・ブラック)
+Score: 0.7497
+--------------------------------------------------
+
+Query: summer dress for women
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 412, Change: +411)
+Product ID: 98656
+Title: FANCYINN Women's Red Short Dress Spaghetti Straps Backless Mini Skater Juniors Graduation Dresses Red S
+Score: 1.1474
+--------------------------------------------------
+Rank 2 (Recall Rank: 487, Change: +485)
+Product ID: 575
+Title: CUPSHE Women's Red Ruffled Lace Up One Piece Swimsuit, L
+Score: 1.0716
+--------------------------------------------------
+Rank 3 (Recall Rank: 447, Change: +444)
+Product ID: 33211
+Title: Women's Halter A-line Beaded Satin Evening Prom Dress Long Formal Gown with Pockets Size 10 Red
+Score: 1.0581
+--------------------------------------------------
+Rank 4 (Recall Rank: 303, Change: +299)
+Product ID: 131075
+Title: Abaowedding Womens American Pioneer Costume Dress Historical Modest Prairie Colonial Floral Dress Green XX-Large
+Score: 0.9619
+--------------------------------------------------
+Rank 5 (Recall Rank: 438, Change: +433)
+Product ID: 98728
+Title: Aitsite Buffalo Plaid Christmas Tree Skirt 48 Inch Thick Rustic Xmas Tree Skirt for Christmas New Year Holiday Party Home Ornaments Decorations Indoor Outdoor (Red)
+Score: 0.9038
+--------------------------------------------------
+Rank 6 (Recall Rank: 351, Change: +345)
+Product ID: 32922
+Title: Zhanmai 5 Pairs Girls Silky Satin Fancy Gloves Wrist Length Princess Dress up Bows Formal Gloves for Age over 3 Years, 5 Colors
+Score: 0.8773
+--------------------------------------------------
+Rank 7 (Recall Rank: 520, Change: +513)
+Product ID: 131713
+Title: Mens Underwear Long Leg Breathable Cool Big and Tall Boxer Briefs Running Underwear for Men 3xl 3x xxxl 3xb 48 50
+Score: 0.8770
+--------------------------------------------------
+Rank 8 (Recall Rank: 498, Change: +490)
+Product ID: 131681
+Title: Andongnywell Women Sexy Spaghetti Strap Mermaid Evening Maxi Dress V Neck Long Formal Evening Gown Dress (White,Small)
+Score: 0.7301
+--------------------------------------------------
+Rank 9 (Recall Rank: 383, Change: +374)
+Product ID: 131331
+Title: MODARANI Twist Front Shirts Purple Sleeveless Tops for Women Loose Tank Tops Solid Color Tie Front Shirts Round Neck M
+Score: 0.6952
+--------------------------------------------------
+Rank 10 (Recall Rank: 343, Change: +333)
+Product ID: 65661
+Title: SUMMER LOVE Genuine Leather Earrings for Women Lightweight Leaf Dangle Drop Earrings Unique Gift
+Score: 0.6625
+--------------------------------------------------
+Rank 11 (Recall Rank: 417, Change: +406)
+Product ID: 65900
+Title: ohyeahlady Women Faux Fur Robe Long Sleeve Nightgowns Black Sheer Mesh Long Lingerie Robes with Belt M
+Score: 0.5916
+--------------------------------------------------
+Rank 12 (Recall Rank: 560, Change: +548)
+Product ID: 66251
+Title: VIKEY Women's Long Hooded Bathrobe Plush Fleece Robe for Christmas Warm Pajamas Shower Nightgown, royblue-L/XL
+Score: 0.5642
+--------------------------------------------------
+Rank 13 (Recall Rank: 437, Change: +424)
+Product ID: 98726
+Title: Christmas Tree Skirt - 48 inches Large White Luxury Faux Fur Tree Skirt Christmas Decorations Holiday Thick Plush Tree Xmas Ornaments (White/Sliver)
+Score: 0.4948
+--------------------------------------------------
+Rank 14 (Recall Rank: 497, Change: +483)
+Product ID: 131677
+Title: Salimdy Women Sexy Floral Lace Mesh Sheer Hollow Out Deep V Neck Spaghetti Strap Bodycon Pencil Mermaid Midi Dress White
+Score: 0.4929
+--------------------------------------------------
+Rank 15 (Recall Rank: 424, Change: +409)
+Product ID: 33152
+Title: Smiling Angel Girls Sweet Lolita Dress Princess Lace Court Skirts Cosplay Costumes Pink, Small
+Score: 0.4780
+--------------------------------------------------
+Rank 16 (Recall Rank: 432, Change: +416)
+Product ID: 33176
+Title: Milumia Women's Vintage Floral Lace Long Sleeve Ruched Neck Flowy Long Dress Black XX-Large
+Score: 0.4200
+--------------------------------------------------
+Rank 17 (Recall Rank: 390, Change: +373)
+Product ID: 131358
+Title: Straw Hats for Women, Visor Hats for Women Beach Hats for Women Sun Hat Womens Straw Hat Made of Natural Raffia
+Score: 0.4040
+--------------------------------------------------
+Rank 18 (Recall Rank: 452, Change: +434)
+Product ID: 461
+Title: TOTOD Tops for Women Elegant Loose A Line Curved Hem Tie Dye Tunic Blouse Plus Size V Neck Short/Long Sleeve T-Shirt（181-Black,XXL）
+Score: 0.3388
+--------------------------------------------------
+Rank 19 (Recall Rank: 304, Change: +285)
+Product ID: 131076
+Title: ReliBeauty Pioneer Girl Costume Laura Ingalls Wilder Dress Yellow, 6-7(130)
+Score: 0.3286
+--------------------------------------------------
+Rank 20 (Recall Rank: 455, Change: +435)
+Product ID: 131546
+Title: Sweegentle Baby Swimwear One-Piece Swimsuit UPF 50+ -Sun Protective Sunsuit Green
+Score: 0.2600
+--------------------------------------------------
+Rank 21 (Recall Rank: N/A, Change: N/A)
+Product ID: 131917
+Title: Spigen iPhone XR ケース 6.1インチ 対応 クリア 米軍MIL規格取得 耐衝撃 カメラ保護 衝撃吸収 Qi充電 ワイヤレス充電 ウルトラ・ハイブリッド 064CS24873 (クリスタル・クリア)
+Score: 0.1678
+--------------------------------------------------
+Rank 22 (Recall Rank: N/A, Change: N/A)
+Product ID: 131918
+Title: Spigen Funda Ultra Hybrid Compatible con iPhone XR - Transparente
+Score: 0.1678
+--------------------------------------------------
+Rank 23 (Recall Rank: N/A, Change: N/A)
+Product ID: 131919
+Title: Spigen Ultra Hybrid [Anti-Yellowing PC Back] [Military Grade] Designed for iPhone XR Case, 6.1 inch Cover - Crystal Clear
+Score: 0.1678
+--------------------------------------------------
+Rank 24 (Recall Rank: 328, Change: +304)
+Product ID: 100
+Title: Doc Miller Open Toe Socks – 1 Pair Compression Socks Women & Men 20-30mmHg Support Stockings Restless Legs Air Travel DVT Shin Splints Varicose Veins Legging Medical Grade Nurses (Pink,X-L)
+Score: 0.1637
+--------------------------------------------------
+Rank 25 (Recall Rank: 499, Change: +474)
+Product ID: 131683
+Title: POSESHE Womens Plus Size Winter Dresses Bodycon Wrap Dresses Sexy White Dresses for Club Night White Bodycon Dress for Women,White,3XL
+Score: -0.0366
+--------------------------------------------------
+Rank 26 (Recall Rank: 491, Change: +465)
+Product ID: 586
+Title: Summer Women Sexy Tshirt Tops Casual Hollow Slim Crewneck Crop Tops Fashion Embroidery Short Sleeve Lace Blouses
+Score: -0.0464
+--------------------------------------------------
+Rank 27 (Recall Rank: 448, Change: +421)
+Product ID: 33215
+Title: GERINLY Solid Color Long Neckerchief Pure Skinny Scarf Necktie for 50's Costume Party Black Silk Scarf (Black)
+Score: -0.0495
+--------------------------------------------------
+Rank 28 (Recall Rank: 505, Change: +477)
+Product ID: 66154
+Title: BABEYOND Women's 1920s Flapper Dress V Neck Slip Dress Roaring 20s Great Gatsby Dress for Party (Black, M)
+Score: -0.0625
+--------------------------------------------------
+Rank 29 (Recall Rank: 337, Change: +308)
+Product ID: 65654
+Title: U7 Thick Choker for Women Girls 19MM Wide Personalized Neck Collar Thick Leather Necklace with DIY Initials Name Chokers 14 to 17 Inch
+Score: -0.0978
+--------------------------------------------------
+Rank 30 (Recall Rank: 534, Change: +504)
+Product ID: 668
+Title: Spigen Tough Armor Designed for iPhone 11 Case (2019) - XP Black
+Score: -0.1133
+--------------------------------------------------
+
+Query: smartphone charger
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 849, Change: +848)
+Product ID: 718
+Title: Anker Powercore II 10000, Ultra-Compact 10000mAh Portable Charger, Upgraded Poweriq 2.0 (up to 18W Output), Fast Charge for iPhone, Samsung Galaxy and More (Compatible with Quick Charge Devices)
+Score: 3.0544
+--------------------------------------------------
+Rank 2 (Recall Rank: 848, Change: +846)
+Product ID: 717
+Title: Anker PowerCore II 10000 (モバイルバッテリー 10000mAh 大容量) 【PSE技術基準適合/PowerIQ 2.0搭載 / LED Wheel】iPhone&Android対応(ブラック)
+Score: 3.0544
+--------------------------------------------------
+Rank 3 (Recall Rank: N/A, Change: N/A)
+Product ID: 140010
+Title: VTech VM923 Video Baby Monitor with 19-Hour Battery Life, 1000ft Long Range, Pan-Tilt-Zoom, Enhanced Night Vision, 2.8” Screen, 2-Way Audio Talk, Temperature Sensor, Power Saving Mode and Lullabies
+Score: 3.0522
+--------------------------------------------------
+Rank 4 (Recall Rank: 791, Change: +787)
+Product ID: 635
+Title: Bose SoundSport Free, True Wireless Earbuds, (Sweatproof Bluetooth Headphones for Workouts and Sports), Midnight Blue / Citron
+Score: 2.9178
+--------------------------------------------------
+Rank 5 (Recall Rank: 790, Change: +785)
+Product ID: 634
+Title: Bose SoundSport Free Auriculares intraurales inalámbricos, Bluetooth, Azul (Midnight Blue/Citron)
+Score: 2.9178
+--------------------------------------------------
+Rank 6 (Recall Rank: 789, Change: +783)
+Product ID: 633
+Title: Bose SoundSport Free wireless headphones, Midnight Blue / Citron [並行輸入品]
+Score: 2.9178
+--------------------------------------------------
+Rank 7 (Recall Rank: 609, Change: +602)
+Product ID: 16418
+Title: iHome iBT234 Dual Alarm Clock FM Radio Bluetooth Speaker, Voice Control Siri and Google Assistant, with USB Charging Station/Phone Chargers for Bedrooms
+Score: 2.8684
+--------------------------------------------------
+Rank 8 (Recall Rank: 872, Change: +864)
+Product ID: 115430
+Title: Amazon Basics USB-C to Lightning Cable Cord, MFi Certified Charger for Apple iPhone 13/12/11, iPad, White, 3-Ft
+Score: 2.7821
+--------------------------------------------------
+Rank 9 (Recall Rank: N/A, Change: N/A)
+Product ID: 57848
+Title: Apple Simple Mobile Prepaid - Apple iPhone 6s (32GB) - Space Gray
+Score: 2.7298
+--------------------------------------------------
+Rank 10 (Recall Rank: 796, Change: +786)
+Product ID: 642
+Title: Bose QuietComfort 35 wireless headphones II - Black [並行輸入品]
+Score: 2.6770
+--------------------------------------------------
+Rank 11 (Recall Rank: 797, Change: +786)
+Product ID: 643
+Title: Auriculares Bluetooth con Cancelación de Ruido Bose QuietComfort 35 II: Auriculares externos Inalámbricos con Micrófono Integrado y Control por Voz de Alexa, Negro
+Score: 2.6770
+--------------------------------------------------
+Rank 12 (Recall Rank: 798, Change: +786)
+Product ID: 644
+Title: Bose QuietComfort 35 II Wireless Bluetooth Headphones, Noise-Cancelling, with Alexa Voice Control - Black
+Score: 2.6770
+--------------------------------------------------
+Rank 13 (Recall Rank: 767, Change: +754)
+Product ID: 576
+Title: WORX WA3575 20V PowerShare 2.0 Ah Replacement Battery, Orange and Black
+Score: 2.6758
+--------------------------------------------------
+Rank 14 (Recall Rank: 857, Change: +843)
+Product ID: 115416
+Title: Fast Charger Compatible with iPhone 11 Xs Max XR X 8 Plus iPad Pro and More, 18W USB C Power Delivery Wall Charger Adapter Plug with Type C to LightningCable
+Score: 2.6003
+--------------------------------------------------
+Rank 15 (Recall Rank: 641, Change: +626)
+Product ID: 98484
+Title: RAVPower Portable Charger 20000mAh PD 3.0 Power Bank QC 3.0 18W USB C External Battery Pack Tri-input and Tri-output Cell Phone Charger Battery for iPhone, Samsung Galaxy and More
+Score: 2.5880
+--------------------------------------------------
+Rank 16 (Recall Rank: 679, Change: +663)
+Product ID: 98590
+Title: YCCSKY Rechargeable Battery Pack for Xbox One, 2 Pack 1200mAh Controller Battery Pack Play and Charge Kit for Xbox One S/X/Elite Controller with 3FT Micro USB Charging Cable and LED Indicator
+Score: 2.5461
+--------------------------------------------------
+Rank 17 (Recall Rank: 759, Change: +742)
+Product ID: 98838
+Title: Tripp Lite 1500VA Smart UPS Back Up, Sine Wave, 1350W Line-Interactive, 2U Rackmount, LCD, USB, DB9, 2 & 3 Year Warranties, $250,000 Insurance (SMART1500RM2U)
+Score: 2.5436
+--------------------------------------------------
+Rank 18 (Recall Rank: 873, Change: +855)
+Product ID: 115433
+Title: Anker iPhone Charger Cable 10 Foot, Powerline+ II Lightning Cable, (10 ft MFi Certified) Extra Long iPhone Charging Cord Compatible with iPhone SE 11 Pro Max Xs XR X 8 7 6S, iPad 8 and More (Silver)
+Score: 2.5276
+--------------------------------------------------
+Rank 19 (Recall Rank: N/A, Change: N/A)
+Product ID: 106544
+Title: TRS to TRRS Adapter 3.5mm Microphone Audio Adapter Cable for All iPhone and Android Smartphones and Tablets (Grey)
+Score: 2.5215
+--------------------------------------------------
+Rank 20 (Recall Rank: N/A, Change: N/A)
+Product ID: 131918
+Title: Spigen Funda Ultra Hybrid Compatible con iPhone XR - Transparente
+Score: 2.4984
+--------------------------------------------------
+Rank 21 (Recall Rank: N/A, Change: N/A)
+Product ID: 131919
+Title: Spigen Ultra Hybrid [Anti-Yellowing PC Back] [Military Grade] Designed for iPhone XR Case, 6.1 inch Cover - Crystal Clear
+Score: 2.4984
+--------------------------------------------------
+Rank 22 (Recall Rank: N/A, Change: N/A)
+Product ID: 131917
+Title: Spigen iPhone XR ケース 6.1インチ 対応 クリア 米軍MIL規格取得 耐衝撃 カメラ保護 衝撃吸収 Qi充電 ワイヤレス充電 ウルトラ・ハイブリッド 064CS24873 (クリスタル・クリア)
+Score: 2.4984
+--------------------------------------------------
+Rank 23 (Recall Rank: 801, Change: +778)
+Product ID: 654
+Title: SAMSUNG Galaxy Watch Active 2 (44mm, GPS, Bluetooth) Smart Watch with Advanced Health Monitoring, Fitness Tracking, and Long lasting Battery, Silver (US Version)
+Score: 2.4835
+--------------------------------------------------
+Rank 24 (Recall Rank: 800, Change: +776)
+Product ID: 653
+Title: Samsung Galaxy Watch Active2 Aluminum 44mm (Bluetooth) [Galaxy純正 並行輸入品] SM-R820NZSATGY (CLOUD SILVER/クラウドシルバー)
+Score: 2.4835
+--------------------------------------------------
+Rank 25 (Recall Rank: N/A, Change: N/A)
+Product ID: 58154
+Title: ViewSonic 3800 Lumens WXGA High Brightness Projector for Home and Office with HDMI Vertical Keystone (PA503W) , White
+Score: 2.4443
+--------------------------------------------------
+Rank 26 (Recall Rank: 718, Change: +692)
+Product ID: 33104
+Title: Logitech M170 Wireless Mouse, 2.4 GHz with USB Mini Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous PC/Mac/Laptop - Blue
+Score: 2.4415
+--------------------------------------------------
+Rank 27 (Recall Rank: N/A, Change: N/A)
+Product ID: 8742
+Title: Amazon Basics USB A Cable with Lightning Connector, Premium Collection, MFi Certified Apple iPhone Charger, 10 Foot, Red
+Score: 2.4372
+--------------------------------------------------
+Rank 28 (Recall Rank: N/A, Change: N/A)
+Product ID: 806
+Title: Spigen Apple Watch ケース 45mm | 44mm 【 Series 7 / Series SE/Series 6 / Series 5 / Series 4 対応 】 落下 衝撃 吸収 タフネスデザイン 保護カバー アップルウォッチケース ラギッド・アーマー 062CS24471 (ホワイト)
+Score: 2.4303
+--------------------------------------------------
+Rank 29 (Recall Rank: N/A, Change: N/A)
+Product ID: 807
+Title: Spigen Rugged Armor Protector Compatible with Apple Watch Case Series 7/6/SE/5/4 (45mm/44mm) - White
+Score: 2.4303
+--------------------------------------------------
+Rank 30 (Recall Rank: N/A, Change: N/A)
+Product ID: 115458
+Title: Apple Funda Silicone Case (para el iPhone XS) - Negro
+Score: 2.4289
+--------------------------------------------------
+
+Query: large iron pan
+----------------------------------------------------------------------------------------------------
+Rank 1 (Recall Rank: 1007, Change: +1006)
+Product ID: 82283
+Title: Smeg TSF01PGUS 50's Retro Style Aesthetic 2 Slice Toaster, Pastel Green
+Score: 2.2766
+--------------------------------------------------
+Rank 2 (Recall Rank: 1011, Change: +1009)
+Product ID: 24949
+Title: DEWALT Screwdriver Bit Set, Impact Ready, FlexTorq, 40-Piece (DWA2T40IR)
+Score: 2.2513
+--------------------------------------------------
+Rank 3 (Recall Rank: 1035, Change: +1032)
+Product ID: 49627
+Title: REVLON 500W Curl and Volumize All in One Hot Air Kit
+Score: 2.0750
+--------------------------------------------------
+Rank 4 (Recall Rank: 1158, Change: +1154)
+Product ID: 8944
+Title: iRobot Roomba 690 Robot Vacuum-Wi-Fi Connectivity, Works with Alexa, Good for Pet Hair, Carpets, Hard Floors, Self-Charging
+Score: 1.8494
+--------------------------------------------------
+Rank 5 (Recall Rank: 947, Change: +942)
+Product ID: 24743
+Title: Dupray Neat Steam Cleaner Multipurpose Heavy Duty Steamer for Floors, Cars, Home Use and More.
+Score: 1.7820
+--------------------------------------------------
+Rank 6 (Recall Rank: 1040, Change: +1034)
+Product ID: 139756
+Title: Dash Clear View Toaster: Extra Wide Slot Toaster with Stainless Steel Accents + See Through Window - Defrost, Reheat + Auto Shut Off Feature for Bagels, Specialty Breads & other Baked Goods - Red
+Score: 1.7422
+--------------------------------------------------
+Rank 7 (Recall Rank: 963, Change: +956)
+Product ID: 123089
+Title: iRobot Roomba i7 (7150) Robot Vacuum- Wi-Fi Connected, Smart Mapping, Works with Alexa, Ideal for Pet Hair, Works With Clean Base, Black
+Score: 1.6538
+--------------------------------------------------
+Rank 8 (Recall Rank: 1089, Change: +1081)
+Product ID: 49780
+Title: Cuisinart CPK-17 PerfecTemp 1.7-Liter Stainless Steel Cordless Electric kettle, 1.7 L, Silver
+Score: 1.6303
+--------------------------------------------------
+Rank 9 (Recall Rank: 1097, Change: +1088)
+Product ID: 57989
+Title: DecoArt DS17-9 Dads17-9 Multi Purpose Primer & Sealer 8 Oz
+Score: 1.6167
+--------------------------------------------------
+Rank 10 (Recall Rank: 905, Change: +895)
+Product ID: 106504
+Title: iRobot Braava Jet M6 (6110) Ultimate Robot Mop- Wi-Fi Connected, Precision Jet Spray, Smart Mapping, Works with Alexa, Ideal for Multiple Rooms, Recharges and Resumes
+Score: 1.6090
+--------------------------------------------------
+Rank 11 (Recall Rank: 1065, Change: +1054)
+Product ID: 115277
+Title: Tork Hand Towel Roll, Natural, Universal, H21, Large, 100% Recycled, 1-Ply, 6 Rolls x 800 ft - RK8002
+Score: 1.5609
+--------------------------------------------------
+Rank 12 (Recall Rank: 983, Change: +971)
+Product ID: 266
+Title: Lavador Tongs for Cooking, Kitchen Tongs with Silicone Tips, High Heat Resistant Locking Tongs, Heavy Duty,Great Grips,Set of 3-7,9,12 inches
+Score: 1.5575
+--------------------------------------------------
+Rank 13 (Recall Rank: 1044, Change: +1031)
+Product ID: 16895
+Title: Klein Tools 1010 Multi Tool Long Nose Wire Cutter, Wire Crimper, Stripper and Bolt Cutter Multi-Purpose Electrician Tool, 8-Inch Long
+Score: 1.5191
+--------------------------------------------------
+Rank 14 (Recall Rank: 1135, Change: +1121)
+Product ID: 33479
+Title: OlarHike Grilling Accessories BBQ Grill Tools Set, 25PCS Stainless Steel Grilling Kit for Smoker, Camping, Kitchen, Barbecue Utensil Gifts for Men Women with Thermometer and Meat Injector
+Score: 1.5178
+--------------------------------------------------
+Rank 15 (Recall Rank: N/A, Change: N/A)
+Product ID: 115359
+Title: Anker Power Strip with USB, 2 Outlet & 2 PowerIQ USB Ports (24W) Travel Power Strip, Powerport Strip 2 Mini with 5ft Long Cord, Safety Door, Flat Plug, for Hotels, Dorm Room, Cruise Ships, and Home
+Score: 1.4007
+--------------------------------------------------
+Rank 16 (Recall Rank: 940, Change: +924)
+Product ID: 41117
+Title: 14 Sheets 224 Pieces Nail Polish Strips Nail Art Stickers Solid Color Full Nail Wraps Self-Adhesive Pure Color Nail Decals with Nail File for Women Girls DIY Nail Art (Multi-Color)
+Score: 1.3593
+--------------------------------------------------
+Rank 17 (Recall Rank: 1148, Change: +1131)
+Product ID: 49888
+Title: Amazon Basics Neoprene Coated Dumbbell Hand Weight Set, 20-Pound Set with Stand, Multicolor
+Score: 1.3467
+--------------------------------------------------
+Rank 18 (Recall Rank: 978, Change: +960)
+Product ID: 8438
+Title: Homasy Handheld Vacuum Cordless, 8Kpa Hand Vacuum with Powerful Cyclonic Suction, Portable Vacuum Cleaner with Long Lasting up to 30mins (Wet&Dry, 3H Charging) for Pet Hair, Dust,Gravel,Home Cleaning
+Score: 1.3288
+--------------------------------------------------
+Rank 19 (Recall Rank: 1199, Change: +1180)
+Product ID: 803
+Title: Spigen Rugged Armor Pro Compatible with Apple Watch Band with Case for Series 7 (45mm) and Series 6/SE/5/4 (44mm) - Black
+Score: 1.3245
+--------------------------------------------------
+Rank 20 (Recall Rank: 1198, Change: +1178)
+Product ID: 802
+Title: Spigen Apple Watch バンド Series 7 45mm / 44mm 一体型 ケース カバー 耐衝撃 PC TPU 二重構造 スポーツバンド 落下 衝撃 吸収 耐久性 傷防止 Series 7 / SE/Series 6 / Series 5 / Series 4 対応 ラギッド・アーマー プロ 062CS25324 (ブラック)
+Score: 1.3245
+--------------------------------------------------
+Rank 21 (Recall Rank: 939, Change: +918)
+Product ID: 82069
+Title: Cricut Maker 3 - DIY Machine Compatible with Matless Cutting Cricut Smart Materials | Professional Level Vinyl, HTV Iron On, and Leather Projects | Easily Make Custom Christmas and Holiday Decorations
+Score: 1.3096
+--------------------------------------------------
+Rank 22 (Recall Rank: 1063, Change: +1041)
+Product ID: 82495
+Title: Secura 1700-Watt Stainless-Steel Triple Basket Electric Deep Fryer with Timer Free Extra Odor Filter, 4L/17-Cup
+Score: 1.3010
+--------------------------------------------------
+Rank 23 (Recall Rank: 946, Change: +923)
+Product ID: 73894
+Title: UPSKY Dog Brush & Cat Brush Self Cleaning Dog Slicker Brush Easy to Clean Pet Grooming Brushes Shedding Grooming Tools for Dogs & Cats with Long or Short Hair
+Score: 1.2986
+--------------------------------------------------
+Rank 24 (Recall Rank: 1074, Change: +1050)
+Product ID: 123489
+Title: Camp Chef Ranger III Cooking System, 3 Cast-Aluminum Burners, Cooking Dimensions: 15.5 in x 29 in
+Score: 1.2960
+--------------------------------------------------
+Rank 25 (Recall Rank: 1149, Change: +1124)
+Product ID: 131809
+Title: Saker Contour Gauge (10 Inch Lock) Profile Tool- Adjustable Lock-Precisely Copy Irregular Shape Duplicator -Irregular Welding Woodworking Tracing - Must Have Tool for DIY Handyman, Construction
+Score: 1.2883
+--------------------------------------------------
+Rank 26 (Recall Rank: 1155, Change: +1129)
+Product ID: 90855
+Title: Goplus 2 in 1 Folding Treadmill, 2.25HP Superfit Under Desk Electric Treadmill, Installation-Free with Blue Tooth Speaker, Remote Control, APP Control and LED Display, Walking Jogging for Home Office
+Score: 1.2634
+--------------------------------------------------
+Rank 27 (Recall Rank: 1016, Change: +989)
+Product ID: 405
+Title: ARC Tortilla Press 8.1 inch,Roti Maker,Haevy Duty Tortillera,Cast Iron Tortilla Maker，Pataconera,Flour Tortilla Press,Chapati Maker,Taco Maker,Taco Press,Puri Press,Even Pressing Black
+Score: 1.2545
+--------------------------------------------------
+Rank 28 (Recall Rank: 901, Change: +873)
+Product ID: 65536
+Title: Yard Machines 140cc OHV 21-Inch 2-in-1 Push Walk-Behind Gas Powered Lawn Mower - Perfect for Small to Medium Sized Yards - Side Discharge and Mulching Capabilities, Black
+Score: 1.2402
+--------------------------------------------------
+Rank 29 (Recall Rank: 925, Change: +896)
+Product ID: 122986
+Title: Performix 11207 Plasti Dip White Multi-Purpose Rubber Coating Aerosol - 11 oz.
+Score: 1.2397
+--------------------------------------------------
+Rank 30 (Recall Rank: 1039, Change: +1009)
+Product ID: 16872
+Title: Deli Magnetic White Board, 8.5" x 11", 2 Pack, Small Dry Erase Board, 1 Dry Erase Marker, 2 Magnets, Plastic Frame
+Score: 1.2003
+--------------------------------------------------
+
+
+Summary
+====================================================================================================
+Total queries: 4
+Total results: 120
+Results per query: 30
+
+Average rank change: +600.62
+Positive changes (improved): 100
+Negative changes (worsened): 0
+No change: 0
