@@ -42,52 +42,82 @@ def create_dataloaders(qd, pd, lbl, train_idx, val_idx, batch_size=32):
     )
 
 
-def train_one_epoch(model, loader, criterion, optimizer, device):
+def point_wise_loss(model, q_batch, p_batch, y_batch):
+    """Point-wise loss using cross entropy on cosine similarity"""
+    out = model(q_batch, p_batch)
+    return nn.BCEWithLogitsLoss()(out, y_batch)
+
+def pair_wise_loss(model, q_batch, p_pos_batch, p_neg_batch, margin=0.1):
+    """Pair-wise loss with margin"""
+    pos_sim = model(q_batch, p_pos_batch)
+    neg_sim = model(q_batch, p_neg_batch)
+    loss = torch.clamp(margin - (pos_sim - neg_sim), min=0)
+    return loss.mean()
+
+def list_wise_loss(model, q_batch, p_batch, r_batch, log_probs):
+    """List-wise loss using softmax and cross entropy"""
+    # Calculate cosine similarities
+    sim = model(q_batch, p_batch)
+    
+    # Subtract log probabilities from similarities
+    sim = sim - log_probs
+    
+    # Apply softmax to get probabilities
+    probs = torch.softmax(sim, dim=1)
+    
+    # Calculate cross entropy loss weighted by rewards
+    loss = -torch.sum(r_batch * torch.log(probs + 1e-8))
+    return loss
+
+def train_one_epoch(model, loader, loss_fn, optimizer, device, training_method="point_wise", log_probs=None):
     model.train()
     total_loss = 0.0
-    for q_batch, p_batch, y_batch in loader:
-        q_batch, p_batch, y_batch = (
-            q_batch.to(device), p_batch.to(device), y_batch.to(device)
-        )
-        if y_batch.dim() == 1:
-            y_batch = y_batch.unsqueeze(1)
-        
-        # Convert binary labels to cosine similarity targets
-        # 1 for positive pairs (clicked), -1 for negative pairs (not clicked)
-        cosine_targets = 2 * y_batch - 1  # Convert 0/1 to -1/1
+    
+    for batch in loader:
+        if training_method == "point_wise":
+            q_batch, p_batch, y_batch = [b.to(device) for b in batch]
+            if y_batch.dim() == 1:
+                y_batch = y_batch.unsqueeze(1)
+            loss = point_wise_loss(model, q_batch, p_batch, y_batch)
+            
+        elif training_method == "pair_wise":
+            q_batch, p_pos_batch, p_neg_batch, y_batch = [b.to(device) for b in batch]
+            loss = pair_wise_loss(model, q_batch, p_pos_batch, p_neg_batch)
+            
+        elif training_method == "list_wise":
+            q_batch, p_batch, r_batch = [b.to(device) for b in batch]
+            loss = list_wise_loss(model, q_batch, p_batch, r_batch, log_probs)
         
         optimizer.zero_grad()
-        with autocast(device_type=device.type, dtype=torch.bfloat16):
-            out = model(q_batch, p_batch)
-            # Use MSE loss for cosine similarity
-            loss = F.mse_loss(out, cosine_targets)
         loss.backward()
         optimizer.step()
         total_loss += loss.item() * q_batch.size(0)
+    
     return total_loss / len(loader.dataset)
 
-
-def evaluate(model, loader, criterion, device):
+def evaluate(model, loader, loss_fn, device, training_method="point_wise", log_probs=None):
     model.eval()
     total_loss = 0.0
+    
     with torch.no_grad():
-        for q_batch, p_batch, y_batch in loader:
-            q_batch, p_batch, y_batch = (
-                q_batch.to(device), p_batch.to(device), y_batch.to(device)
-            )
-            if y_batch.dim() == 1:
-                y_batch = y_batch.unsqueeze(1)
+        for batch in loader:
+            if training_method == "point_wise":
+                q_batch, p_batch, y_batch = [b.to(device) for b in batch]
+                if y_batch.dim() == 1:
+                    y_batch = y_batch.unsqueeze(1)
+                loss = point_wise_loss(model, q_batch, p_batch, y_batch)
+                
+            elif training_method == "pair_wise":
+                q_batch, p_pos_batch, p_neg_batch, y_batch = [b.to(device) for b in batch]
+                loss = pair_wise_loss(model, q_batch, p_pos_batch, p_neg_batch)
+                
+            elif training_method == "list_wise":
+                q_batch, p_batch, r_batch = [b.to(device) for b in batch]
+                loss = list_wise_loss(model, q_batch, p_batch, r_batch, log_probs)
             
-            # Convert binary labels to cosine similarity targets
-            cosine_targets = 2 * y_batch - 1  # Convert 0/1 to -1/1
-            
-            with autocast(device_type=device.type, dtype=torch.bfloat16):
-                out = model(q_batch, p_batch)
-                # Use MSE loss for cosine similarity
-                loss = F.mse_loss(out, cosine_targets)
             total_loss += loss.item() * q_batch.size(0)
+    
     return total_loss / len(loader.dataset)
-
 
 def plot_losses(train_losses, val_losses, epoch, num_epochs):
     """Plot training and validation losses in real-time"""
@@ -104,96 +134,133 @@ def plot_losses(train_losses, val_losses, epoch, num_epochs):
     plt.draw()
     plt.pause(0.1)
 
-
-def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100, lr=1e-3, model_dir='models'):
+def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100, lr=1e-3, 
+                        model_dir='models', training_method="point_wise"):
     device = select_device()
     print(f"Training on {device}\nCV folds={n_splits}, epochs={num_epochs}, lr={lr}\n")
+    
     if model_dir and not os.path.exists(model_dir):
         os.makedirs(model_dir)
+    
+    # Create subdirectory for the specific training method
+    method_dir = os.path.join(model_dir, training_method)
+    if not os.path.exists(method_dir):
+        os.makedirs(method_dir)
+    
     qd, pd, lbl = qd.float(), pd.float(), lbl.float()
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
     best_loss, best_path = float('inf'), ''
-
+    
     # Initialize plot
-    plt.ion()  # Turn on interactive mode
+    plt.ion()
     train_losses = []
     val_losses = []
-
+    
+    # Calculate log probabilities for list-wise training
+    log_probs = None
+    if training_method == "list_wise":
+        product_counts = pd.value_counts()
+        probs = product_counts / product_counts.sum()
+        log_probs = torch.tensor(np.log(probs.values), device=device)
+    
     for fold, (tr_i, val_i) in enumerate(kf.split(qd), 1):
         train_loader, val_loader = create_dataloaders(qd, pd, lbl, tr_i, val_i, batch_size)
         model = TwoTowerModel(qd.size(1), pd.size(1), 64, 64, 32).to(device)
         optimizer = AdamW(model.parameters(), lr=lr)
-
+        
         # Reset losses for new fold
         train_losses = []
         val_losses = []
-
+        
         for epoch in range(1, num_epochs+1):
             start = time.time()
-            tl = train_one_epoch(model, train_loader, None, optimizer, device)
-            vl = evaluate(model, val_loader, None, device)
+            tl = train_one_epoch(model, train_loader, None, optimizer, device, 
+                               training_method, log_probs)
+            vl = evaluate(model, val_loader, None, device, 
+                        training_method, log_probs)
             elapsed = time.time() - start
-
+            
             # Store losses
             train_losses.append(tl)
             val_losses.append(vl)
-
+            
             # Update plot
             plot_losses(train_losses, val_losses, epoch, num_epochs)
-
+            
             if epoch % 10 == 0 or epoch == num_epochs:
                 current_lr = optimizer.param_groups[0]['lr']
-                print(f'Fold {fold}, Ep {epoch}/{num_epochs}: TL={tl:.4f}, VL={vl:.4f}, LR={current_lr:.2e}, time={elapsed:.2f}s')
-
+                print(f'Fold {fold}, Ep {epoch}/{num_epochs}: TL={tl:.4f}, VL={vl:.4f}, '
+                      f'LR={current_lr:.2e}, time={elapsed:.2f}s')
+        
         if vl < best_loss:
-            best_loss, best_path = vl, os.path.join(model_dir, f'best_fold{fold}.pt')
+            best_loss, best_path = vl, os.path.join(method_dir, f'best_fold{fold}.pt')
             torch.save(model.state_dict(), best_path)
-
-    plt.ioff()  # Turn off interactive mode
-    plt.close()  # Close the plot
+    
+    plt.ioff()
+    plt.close()
     return best_path
 
-
-def main(train_inputs, train_labels, val_inputs, val_labels):
-
+def main(train_inputs, train_labels, val_inputs, val_labels, training_method="point_wise"):
     device = select_device()
-    train_q = torch.tensor(train_inputs[0], dtype=torch.float32)
-    train_p = torch.tensor(train_inputs[1], dtype=torch.float32)
-    train_y = torch.tensor(train_labels,    dtype=torch.float32)
-    val_q   = torch.tensor(val_inputs[0],   dtype=torch.float32)
-    val_p   = torch.tensor(val_inputs[1],   dtype=torch.float32)
-    val_y   = torch.tensor(val_labels,      dtype=torch.float32)
     
-
+    if training_method == "point_wise":
+        train_q = torch.tensor(train_inputs[0], dtype=torch.float32)
+        train_p = torch.tensor(train_inputs[1], dtype=torch.float32)
+        train_y = torch.tensor(train_labels, dtype=torch.float32)
+        val_q = torch.tensor(val_inputs[0], dtype=torch.float32)
+        val_p = torch.tensor(val_inputs[1], dtype=torch.float32)
+        val_y = torch.tensor(val_labels, dtype=torch.float32)
+        
+    elif training_method == "pair_wise":
+        train_q = torch.tensor(train_inputs[0], dtype=torch.float32)
+        train_p_pos = torch.tensor(train_inputs[1], dtype=torch.float32)
+        train_p_neg = torch.tensor(train_inputs[2], dtype=torch.float32)
+        train_y = torch.tensor(train_labels, dtype=torch.float32)
+        val_q = torch.tensor(val_inputs[0], dtype=torch.float32)
+        val_p_pos = torch.tensor(val_inputs[1], dtype=torch.float32)
+        val_p_neg = torch.tensor(val_inputs[2], dtype=torch.float32)
+        val_y = torch.tensor(val_labels, dtype=torch.float32)
+        
+    elif training_method == "list_wise":
+        train_q = torch.tensor(train_inputs[0], dtype=torch.float32)
+        train_p = torch.tensor(train_inputs[1], dtype=torch.float32)
+        train_r = torch.tensor(train_inputs[2], dtype=torch.float32)
+        train_y = torch.tensor(train_labels, dtype=torch.float32)
+        val_q = torch.tensor(val_inputs[0], dtype=torch.float32)
+        val_p = torch.tensor(val_inputs[1], dtype=torch.float32)
+        val_r = torch.tensor(val_inputs[2], dtype=torch.float32)
+        val_y = torch.tensor(val_labels, dtype=torch.float32)
+    
     best = run_cross_validation(
-        train_q, 
-        train_p, 
-        train_y, 
-        n_splits=NUM_SPLITS, 
-        batch_size=BATCH_SIZE, 
-        num_epochs=NUM_EPOCHS, 
+        train_q, train_p, train_y,
+        n_splits=NUM_SPLITS,
+        batch_size=BATCH_SIZE,
+        num_epochs=NUM_EPOCHS,
         lr=LR,
-        model_dir=MODEL_DIR
-        )
-
-    # check if input dims match
-    assert train_q.size(1) == INPUT_DIM_QUERY
-    assert train_p.size(1) == INPUT_DIM_PRODUCT
-
+        model_dir=MODEL_DIR,
+        training_method=training_method
+    )
+    
     model = TwoTowerModel(
-        q_in=INPUT_DIM_QUERY, 
-        p_in=INPUT_DIM_PRODUCT, 
-        q_hidden=HIDDEN_DIM_QUERY, 
-        p_hidden=HIDDEN_DIM_PRODUCT, 
+        q_in=INPUT_DIM_QUERY,
+        p_in=INPUT_DIM_PRODUCT,
+        q_hidden=HIDDEN_DIM_QUERY,
+        p_hidden=HIDDEN_DIM_PRODUCT,
         emb=EMBEDDING_DIM
-        ).to(device)
+    ).to(device)
+    
     model.load_state_dict(torch.load(best, map_location=device))
     test_loader = DataLoader(TensorDataset(val_q, val_p, val_y), batch_size=BATCH_SIZE)
-    test_loss = evaluate(model, test_loader, nn.BCEWithLogitsLoss(), device)
+    test_loss = evaluate(model, test_loader, None, device, training_method)
     print(f'Final Test Loss: {test_loss:.4f}')
-    torch.save(model.state_dict(), os.path.join(MODEL_DIR, 'final_model.pt'))
+    
+    # Save final model with training method in the name
+    final_model_path = os.path.join(MODEL_DIR, training_method, 'final_model.pt')
+    torch.save(model.state_dict(), final_model_path)
 
 if __name__ == '__main__':
     from recsys.data.load_data import load_data
-    train_inputs, train_labels, val_inputs, val_labels = load_data()
-    main(train_inputs, train_labels, val_inputs, val_labels)
+    method = "pair_wise"
+    train_inputs, train_labels, val_inputs, val_labels = load_data(training_method=method)
+    print(f"Training method: {method}")
+    main(train_inputs, train_labels, val_inputs, val_labels, training_method=method)
