@@ -8,7 +8,7 @@ DCN_FC_OUT_DIM = 32
 EMBEDDING_DIM = 32
 LR = 3e-3
 NUM_EPOCHS = 50
-BATCH_SIZE = 64
+BATCH_SIZE = 512
 NUM_SPLITS = 5
 MODEL_DIR = 'models/ranking-dcn'
 
@@ -27,6 +27,12 @@ from dataclasses import dataclass
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
 import numpy as np
+from recsys.utils.training_utils import (
+    plot_losses,
+    setup_plot_directories,
+    save_training_plots,
+    save_final_evaluation_plot
+)
 
 def create_dataloaders(qd, pd, lbl, train_idx, val_idx, batch_size=32):
     train_ds = TensorDataset(qd[train_idx], pd[train_idx], lbl[train_idx])
@@ -77,26 +83,13 @@ def loss_fn(y_true, y_pred):
     
     return nn.BCEWithLogitsLoss()(y_true, y_pred)
 
-def plot_losses(train_losses, val_losses, epoch, num_epochs):
-    """Plot training and validation losses in real-time"""
-    plt.figure(figsize=(10, 6))
-    plt.plot(train_losses, label='Training Loss', color='blue')
-    plt.plot(val_losses, label='Validation Loss', color='red')
-    plt.title(f'Loss vs Epoch (Current Epoch: {epoch}/{num_epochs})')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-    plt.legend()
-    plt.grid(True)
-    plt.xticks(np.arange(0, len(train_losses), max(1, len(train_losses)//10)))
-    plt.tight_layout()
-    plt.draw()
-    plt.pause(0.1)
-
 def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100, lr=1e-3, model_dir='models'):
     device = select_device()
     print(f"Training on {device}\nCV folds={n_splits}, epochs={num_epochs}, lr={lr}\n")
-    if model_dir and not os.path.exists(model_dir):
-        os.makedirs(model_dir)
+    
+    # Setup directories
+    model_dir, plots_dir = setup_plot_directories(model_dir)
+    
     qd, pd, lbl = qd.float(), pd.float(), lbl.float()
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
     best_loss, best_path = float('inf'), ''
@@ -127,20 +120,32 @@ def run_cross_validation(qd, pd, lbl, n_splits=5, batch_size=32, num_epochs=100,
             train_losses.append(tl)
             val_losses.append(vl)
 
-            # Update plot
-            plot_losses(train_losses, val_losses, epoch, num_epochs)
+            # Update plot every 5 epochs
+            if epoch % 5 == 0 or epoch == num_epochs:
+                plot_losses(train_losses, val_losses, epoch, num_epochs)
 
             if epoch % 10 == 0 or epoch == num_epochs:
                 current_lr = optimizer.param_groups[0]['lr']
                 print(f'Fold {fold}, Ep {epoch}/{num_epochs}: TL={tl:.4f}, VL={vl:.4f}, LR={current_lr:.2e}, time={elapsed:.2f}s')
 
-        if vl < best_loss:
-            best_loss, best_path = vl, os.path.join(model_dir, f'best_fold{fold}.pt')
-            torch.save(model.state_dict(), best_path)
+            if vl < best_loss:
+                best_loss, best_path = vl, os.path.join(model_dir, f'best_fold{fold}.pt')
+                torch.save(model.state_dict(), best_path)
 
-    plt.ioff()  # Turn off interactive mode
-    plt.close()  # Close the plot
-    return best_path
+            # Save plots for this fold
+            save_training_plots(
+                train_losses,
+                val_losses,
+                epoch,
+                num_epochs,
+                plots_dir,
+                fold,
+                is_best=(vl < best_loss)
+            )
+
+    plt.ioff()
+    plt.close('all')
+    return best_path, fold, best_loss
 
 @dataclass
 class DCNConfig:
@@ -162,7 +167,7 @@ def main(train_inputs, train_labels, val_inputs, val_labels):
     val_y   = torch.tensor(val_labels,      dtype=torch.float32)
     
 
-    best = run_cross_validation(
+    best_path, best_fold, best_loss = run_cross_validation(
         train_q, 
         train_p, 
         train_y, 
@@ -181,11 +186,16 @@ def main(train_inputs, train_labels, val_inputs, val_labels):
         config=DCNConfig(),
         ).to(device)
 
-    model.load_state_dict(torch.load(best, map_location=device))
+    model.load_state_dict(torch.load(best_path, map_location=device))
     test_loader = DataLoader(TensorDataset(val_q, val_p, val_y), batch_size=BATCH_SIZE)
     test_loss = evaluate(model, test_loader, nn.BCEWithLogitsLoss(), device)
+
+    # After training, save the final evaluation plot
+    save_final_evaluation_plot(test_loss, MODEL_DIR)
+    
     print(f'Final Test Loss: {test_loss:.4f}')
-    torch.save(model.state_dict(), os.path.join(MODEL_DIR, 'final_model.pt'))
+    print(f'Best model was from fold {best_fold} with validation loss: {best_loss:.4f}')
+    print(f'Plots saved in: {os.path.join(MODEL_DIR, "plots")}')
 
 if __name__ == '__main__':
     from recsys.data.load_data import load_data

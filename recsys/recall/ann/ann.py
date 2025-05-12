@@ -1,13 +1,13 @@
 from annoy import AnnoyIndex
 import pandas as pd
 import numpy as np
-import os # Import os for path checking
+import os
 
 # Define constants for dimensions (replace with actual values if different)
 # These might be better passed during initialization or loaded from config
 DEFAULT_QUERY_DIM = 32
 DEFAULT_PRODUCT_DIM = 160
-DEFAULT_TREE_DIR = "/Users/haozhezhang/Documents/Python Project/two_tower_search/recsys/recall/ann/trees" # Define base dir
+DEFAULT_TREE_DIR = "recsys/recall/ann/trees" # Define base dir
 
 class AnnoyRecall:
     """
@@ -124,27 +124,20 @@ class AnnoyRecall:
         return loaded_q and loaded_p
 
     def _ensure_product_index_loaded(self):
-        """Ensures the product index is loaded, loading if necessary."""
+        """Ensure the product index is loaded."""
         if self.p_index is None:
-            # Try loading both, as load_indices handles both paths
-            if not self.load_indices():
-                 # Check specifically if p_index is still None after attempting load
-                 if self.p_index is None:
-                      raise FileNotFoundError(f"Product index file not found or failed to load from {self.p_tree_path}. Build it first.")
-            if self.p_index is None: # Check again after trying to load
-                 raise RuntimeError("Failed to load product index.")
+            if not os.path.exists(self.p_tree_path):
+                raise FileNotFoundError(f"Product index file not found or failed to load from {self.p_tree_path}. Build it first.")
+            self.p_index = AnnoyIndex(self.product_dim, 'euclidean')
+            self.p_index.load(self.p_tree_path)
 
     def _ensure_query_index_loaded(self):
-        """Ensures the query index is loaded, loading if necessary."""
+        """Ensure the query index is loaded."""
         if self.q_index is None:
-            # Try loading both, as load_indices handles both paths
-            if not self.load_indices():
-                 # Check specifically if q_index is still None after attempting load
-                 if self.q_index is None:
-                      raise FileNotFoundError(f"Query index file not found or failed to load from {self.q_tree_path}. Build it first.")
-            if self.q_index is None: # Check again after trying to load
-                 raise RuntimeError("Failed to load query index.")
-
+            if not os.path.exists(self.q_tree_path):
+                raise FileNotFoundError(f"Query index file not found or failed to load from {self.q_tree_path}. Build it first.")
+            self.q_index = AnnoyIndex(self.query_dim, 'euclidean')
+            self.q_index.load(self.q_tree_path)
 
     def get_product_neighbors_by_vector(self, query_vector: list | np.ndarray, k: int, include_distances: bool = False) -> list[int] | list[tuple[int, float]]:
         """
@@ -194,8 +187,8 @@ if __name__ == '__main__':
     # Make sure paths are correct relative to where you run the script
     try:
         # Load product embeddings and add 'pid'
-        df_product_meta = pd.read_parquet('versions/1/shopping_queries_dataset_products.parquet')[['product_id','product_title']].drop_duplicates()
-        df_product_emb_vectors = pd.read_csv('versions/1/product_150k.csv') # Assuming this has product_id and p0..pN
+        df_product_meta = pd.read_parquet('data/shopping_queries_dataset_products.parquet')[['product_id','product_title']].drop_duplicates()
+        df_product_emb_vectors = pd.read_csv('data/product_150k.csv') # Assuming this has product_id and p0..pN
         df_product_embedding = pd.merge(df_product_emb_vectors, df_product_meta, on='product_id').reset_index(drop=True)
         df_product_embedding['pid'] = df_product_embedding.index # Use index as pid
 
@@ -233,7 +226,7 @@ if __name__ == '__main__':
 
     except FileNotFoundError as e:
         print(f"Error loading data files: {e}")
-        print("Please ensure 'versions/1/product_150k.csv', 'versions/1/query_150k.csv', and 'versions/1/shopping_queries_dataset_products.parquet' exist.")
+        print("Please ensure 'data/product_150k.csv', 'data/query_150k.csv', and 'data/shopping_queries_dataset_products.parquet' exist.")
         exit() # Exit if data can't be loaded
     except KeyError as e:
         print(f"Error: A required column is missing from the CSV/Parquet files: {e}")

@@ -10,10 +10,11 @@ from recsys.ranking.dcn.train import DCNConfig, MODEL_DIR
 from recsys.recall.two_towers.utils import select_device
 from recsys.data.embeding import convert_query
 from recsys.recall.core import main as recall_main
+from recsys.utils.log import save_ranking_results
 
 # Define constants (consider moving these to a config file)
-PRODUCT_EMBEDDING_CSV = 'versions/1/product_150k.csv'
-PRODUCT_META_PARQUET = 'versions/1/shopping_queries_dataset_products.parquet'
+PRODUCT_EMBEDDING_CSV = 'data/product_150k.csv'
+PRODUCT_META_PARQUET = 'data/shopping_queries_dataset_products.parquet'
 MODEL_PATH = os.path.join(MODEL_DIR, "final_model.pt")
 
 # Dimensions should match the saved model
@@ -21,86 +22,6 @@ INPUT_DIM_Q = 32
 INPUT_DIM_P = 160
 HIDDEN_DIM = 32
 EMBED_DIM = 32
-
-def save_results_to_file(results: pd.DataFrame, recall_results: pd.DataFrame, queries: List[str], output_dir: str = 'results'):
-    """
-    Save the ranking results to a text file, including rank changes from recall.
-    
-    Args:
-        results: DataFrame containing the ranking results
-        recall_results: DataFrame containing the recall results
-        queries: List of original queries
-        output_dir: Directory to save the results
-    """
-    # Create output directory if it doesn't exist
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    
-    # Generate filename with timestamp
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    filename = os.path.join(output_dir, f'ranking_results_{timestamp}.txt')
-    
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write("Ranking Results with Recall Comparison\n")
-        f.write("=" * 100 + "\n\n")
-        
-        # Write results for each query
-        for query in queries:
-            f.write(f"Query: {query}\n")
-            f.write("-" * 100 + "\n")
-            
-            # Get results for this query
-            query_results = results[results['query'] == query]
-            query_recall = recall_results[recall_results['query'] == query]
-            
-            if query_results.empty:
-                f.write("No results found for this query.\n\n")
-                continue
-                
-            # Create a mapping of pid to recall rank
-            recall_rank_map = {row['pid']: idx + 1 for idx, row in query_recall.iterrows()}
-            
-            # Write each product result
-            for _, row in query_results.iterrows():
-                recall_rank = recall_rank_map.get(row['pid'], 'N/A')
-                rank_change = f"{recall_rank - row['rank']:+d}" if isinstance(recall_rank, int) else "N/A"
-                
-                f.write(f"Rank {row['rank']} (Recall Rank: {recall_rank}, Change: {rank_change})\n")
-                f.write(f"Product ID: {row['pid']}\n")
-                f.write(f"Title: {row['product_title']}\n")
-                f.write(f"Score: {row['score']:.4f}\n")
-                f.write("-" * 50 + "\n")
-            
-            f.write("\n")
-        
-        # Write summary
-        f.write("\nSummary\n")
-        f.write("=" * 100 + "\n")
-        f.write(f"Total queries: {len(queries)}\n")
-        f.write(f"Total results: {len(results)}\n")
-        f.write(f"Results per query: {len(results) // len(queries)}\n")
-        
-        # Calculate average rank changes
-        rank_changes = []
-        for query in queries:
-            query_results = results[results['query'] == query]
-            query_recall = recall_results[recall_results['query'] == query]
-            recall_rank_map = {row['pid']: idx + 1 for idx, row in query_recall.iterrows()}
-            
-            for _, row in query_results.iterrows():
-                recall_rank = recall_rank_map.get(row['pid'])
-                if isinstance(recall_rank, int):
-                    rank_changes.append(recall_rank - row['rank'])
-        
-        if rank_changes:
-            avg_change = sum(rank_changes) / len(rank_changes)
-            f.write(f"\nAverage rank change: {avg_change:+.2f}\n")
-            f.write(f"Positive changes (improved): {sum(1 for x in rank_changes if x > 0)}\n")
-            f.write(f"Negative changes (worsened): {sum(1 for x in rank_changes if x < 0)}\n")
-            f.write(f"No change: {sum(1 for x in rank_changes if x == 0)}\n")
-    
-    print(f"\nResults saved to: {filename}")
-    return filename
 
 def main(querys: List[str], k: int = 30) -> pd.DataFrame:
     '''
@@ -191,24 +112,38 @@ def main(querys: List[str], k: int = 30) -> pd.DataFrame:
         q_batch = torch.tensor(df_query_embedding[query_cols].values, dtype=torch.float32)
         p_batch = torch.tensor(df_product_embedding[product_cols].values, dtype=torch.float32)
         
-        # Get scores from DCN model
-        scores = evaluator.evaluate(q_batch, p_batch)
-        print("DCN scores calculated.")
-        
-        # Get top k products for each query
+        # Get scores for each query-product pair
         results = []
         for i, query in enumerate(querys):
-            # Convert scores to numpy and get top k indices
-            scores_np = scores[i].cpu().numpy()
-            top_k_indices = np.argsort(scores_np)[-k:][::-1]  # Get indices of top k scores in descending order
+            # Get query embedding
+            q_emb = q_batch[i:i+1]  # Keep batch dimension [1, query_dim]
+            
+            # Get products for this query from recall results
+            query_recall = recall_results[recall_results['query'] == query]
+            query_pids = set(query_recall['pid'])
+            query_products = df_product_embedding[df_product_embedding['pid'].isin(query_pids)]
+            
+            if query_products.empty:
+                print(f"No products found for query: {query}")
+                continue
+            
+            # Get product embeddings for this query
+            p_emb = torch.tensor(query_products[product_cols].values, dtype=torch.float32)
+            
+            # Get scores for this query-product pairs
+            scores = evaluator.evaluate(q_emb, p_emb)  # [1, num_products]
+            scores_np = scores[0].cpu().numpy()  # Remove batch dimension
+            
+            # Get top k products
+            top_k_indices = np.argsort(scores_np)[-k:][::-1]
             
             # Add results for this query
             for rank, prod_idx in enumerate(top_k_indices):
-                pid = df_product_embedding.iloc[prod_idx]['pid']
+                pid = query_products.iloc[prod_idx]['pid']
                 results.append({
                     'query': query,
                     'pid': int(pid),
-                    'product_title': df_product_embedding.iloc[prod_idx]['product_title'],
+                    'product_title': query_products.iloc[prod_idx]['product_title'],
                     'score': float(scores_np[prod_idx]),
                     'rank': rank + 1
                 })
@@ -216,8 +151,13 @@ def main(querys: List[str], k: int = 30) -> pd.DataFrame:
         print(f"Ranking completed. Returning {len(results)} recommendations.")
         results_df = pd.DataFrame(results)
         
-        # Save results to file with recall comparison
-        save_results_to_file(results_df, recall_results, querys)
+        # Save results
+        if not results_df.empty:
+            print(f"Ranking process completed. Returning {len(results_df)} recommendations.")
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            save_ranking_results(results_df, recall_results, querys, timestamp)
+        else:
+            print("Ranking process completed. No recommendations generated (check logs for errors).")
         
         return results_df
         
@@ -227,7 +167,14 @@ def main(querys: List[str], k: int = 30) -> pd.DataFrame:
 
 if __name__ == "__main__":
     # Example usage:
-    test_querys = ['bluetooth earphones', 'summer dress for women', 'smartphone charger', 'large iron pan']
+    test_querys = [
+        'bluetooth earphones', 
+        'summer dress for women', 
+        'smartphone charger', 
+        'large iron pan',
+        'large screen smart phone',
+        'smart phone with large screen'
+        ]
     top_k = 30
     results = main(test_querys, top_k)
     print("\nRanked Results:")

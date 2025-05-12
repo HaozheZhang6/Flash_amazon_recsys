@@ -1,7 +1,10 @@
 import torch
+from torch.utils.data import TensorDataset, DataLoader
 from recsys.recall.two_towers.model import TwoTowerModel
-from recsys.recall.two_towers.train import select_device
+from recsys.recall.two_towers.utils import select_device
+from recsys.data.load_data import load_data
 import numpy as np
+from typing import Dict, Tuple
 
 class TwoTowerEvaluator:
     """Loads a TwoTowerModel and computes scores between query and product batches."""
@@ -14,7 +17,6 @@ class TwoTowerEvaluator:
         hidden_dim_q: int,
         hidden_dim_p: int,
         embed_dim: int,
-        training_method: str = "point_wise",
         device: torch.device = None,
     ):
         """
@@ -27,13 +29,11 @@ class TwoTowerEvaluator:
             hidden_dim_q: Hidden size for query tower.
             hidden_dim_p: Hidden size for product tower.
             embed_dim: Output embedding dimension.
-            training_method: The training method used ("point_wise", "pair_wise", or "list_wise")
             device: Torch device; defaults to CPU.
         """
         if device is None:
             device = select_device()
         self.device = device
-        self.training_method = training_method
 
         # Instantiate and load weights
         self.model = TwoTowerModel(
@@ -44,84 +44,120 @@ class TwoTowerEvaluator:
             emb=embed_dim,
         ).to(self.device)
 
-        state = torch.load(model_path, map_location=self.device)
-        self.model.load_state_dict(state)
+        self.model.load_state_dict(torch.load(model_path, map_location=self.device))
         self.model.eval()
 
-    def evaluate(
-        self,
-        query_batch: torch.Tensor,
-        product_batch: torch.Tensor,
-        log_probs: torch.Tensor = None,
-    ) -> torch.Tensor:
+    def evaluate(self, q_batch: torch.Tensor, p_batch: torch.Tensor) -> torch.Tensor:
         """
-        Compute the score matrix for all query-product pairs.
-
+        Evaluate query-product pairs and return similarity scores.
+        
         Args:
-            query_batch: Tensor of shape (n_queries, input_dim_q).
-            product_batch: Tensor of shape (n_products, input_dim_p).
-            log_probs: Optional tensor of log probabilities for list-wise evaluation.
-
-        Returns:
-            scores: Tensor of shape (n_queries, n_products), where
-                scores[i, j] = dot(query_emb[i], product_emb[j]).
+            q_batch: Query embeddings [num_queries, query_dim]
+            p_batch: Product embeddings [num_products, product_dim]
         """
         with torch.no_grad():
-            q_emb = self.model.query_tower(query_batch.to(self.device))
-            p_emb = self.model.product_tower(product_batch.to(self.device))
+            q_batch = q_batch.to(self.device)  # [num_queries, query_dim]
+            p_batch = p_batch.to(self.device)  # [num_products, product_dim]
             
-            # Normalize embeddings
-            q_norm = q_emb.norm(p=2, dim=1, keepdim=True)
-            p_norm = p_emb.norm(p=2, dim=1, keepdim=True)
-            eps = 1e-8
-            q_emb = q_emb / (q_norm + eps)
-            p_emb = p_emb / (p_norm + eps)
+            # Get embeddings from the model
+            query_emb = self.model.query_tower(q_batch)  # [num_queries, embed_dim]
+            prod_emb = self.model.product_tower(p_batch)  # [num_products, embed_dim]
             
-            # Calculate cosine similarity
-            scores = q_emb @ p_emb.t()
+            # Reshape for broadcasting
+            query_emb = query_emb.unsqueeze(1)  # [num_queries, 1, embed_dim]
+            prod_emb = prod_emb.unsqueeze(0)    # [1, num_products, embed_dim]
             
-            # For list-wise evaluation, subtract log probabilities if provided
-            if self.training_method == "list_wise" and log_probs is not None:
-                scores = scores - log_probs.unsqueeze(0)
+            # Calculate similarity scores
+            sim = torch.sum(query_emb * prod_emb, dim=2)  # [num_queries, num_products]
             
-        return scores
+            return sim
 
-def main():
-    """Example usage of TwoTowerEvaluator."""
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    training_method = "point_wise"  # or "pair_wise" or "list_wise"
-    model_path = f"/Users/haozhezhang/Documents/Python Project/two_tower_search/models/two_towers/{training_method}/final_model.pt"
-
-    # These must match your training config
-    input_dim_q = 32
-    input_dim_p = 160
-    hidden_q = 64
-    hidden_p = 64
-    embed = 32
-
-    evaluator = TwoTowerEvaluator(
-        model_path=model_path,
-        input_dim_q=input_dim_q,
-        input_dim_p=input_dim_p,
-        hidden_dim_q=hidden_q,
-        hidden_dim_p=hidden_p,
-        embed_dim=embed,
-        training_method=training_method,
-        device=device,
+def compare_models() -> Dict[str, float]:
+    """
+    Compare the cross-entropy loss of all three training methods (point-wise, pair-wise, list-wise)
+    on the test data, considering only E->1 cases.
+    
+    Returns:
+        Dictionary containing the test loss for each training method
+    """
+    device = select_device()
+    results = {}
+    
+    # Load test data
+    test_inputs, test_labels, _, _ = load_data(usage="recall", training_method="point_wise")
+    
+    # Convert test data to tensors
+    test_q = torch.tensor(test_inputs[0], dtype=torch.float32)
+    test_p = torch.tensor(test_inputs[1], dtype=torch.float32)
+    test_y = torch.tensor(test_labels, dtype=torch.float32)
+    
+    # Filter for E->1 cases only
+    e_mask = (test_y == 1.0)
+    test_q = test_q[e_mask]
+    test_p = test_p[e_mask]
+    test_y = test_y[e_mask]
+    
+    # Create test loader
+    test_loader = DataLoader(
+        TensorDataset(test_q, test_p, test_y),
+        batch_size=512,
+        shuffle=True
     )
-
-    # Dummy batches for demonstration
-    q_batch = torch.randn(5, input_dim_q)
-    p_batch = torch.randn(8, input_dim_p)
     
-    # For list-wise evaluation, you might want to provide log probabilities
-    log_probs = None
-    if training_method == "list_wise":
-        log_probs = torch.tensor(np.log(np.ones(8) / 8), device=device)  # Example uniform distribution
+    # Load and evaluate each model
+    training_methods = ["point_wise", "pair_wise", "list_wise"]
     
-    scores = evaluator.evaluate(q_batch, p_batch, log_probs)
-    print("Score matrix shape:", scores.shape)
-    print(scores)
+    for method in training_methods:
+        # Load model
+        model = TwoTowerModel(
+            q_in=32,
+            p_in=160,
+            q_hidden=64,
+            p_hidden=64,
+            emb=32
+        ).to(device)
+        
+        # Load the best model for this method
+        model_path = f'models/two_towers/{method}/final_model.pt'
+        try:
+            model.load_state_dict(torch.load(model_path, map_location=device))
+            model.eval()
+            
+            # Calculate loss
+            total_loss = 0.0
+            num_samples = 0
+            
+            with torch.no_grad():
+                for q_batch, p_batch, y_batch in test_loader:
+                    q_batch, p_batch, y_batch = (
+                        q_batch.to(device),
+                        p_batch.to(device),
+                        y_batch.to(device)
+                    )
+                    
+                    # Get model predictions
+                    pred = model(q_batch, p_batch)
+                    
+                    # Calculate cross-entropy loss
+                    loss = torch.nn.BCEWithLogitsLoss()(pred, y_batch.unsqueeze(1))
+                    
+                    total_loss += loss.item() * q_batch.size(0)
+                    num_samples += q_batch.size(0)
+            
+            # Calculate average loss
+            avg_loss = total_loss / num_samples
+            results[method] = avg_loss
+            
+            print(f"{method} test loss: {avg_loss:.4f}")
+            
+        except Exception as e:
+            print(f"Error loading {method} model: {str(e)}")
+            results[method] = float('inf')
+    
+    return results
 
 if __name__ == "__main__":
-    main()
+    results = compare_models()
+    print("\nFinal Results:")
+    for method, loss in results.items():
+        print(f"{method}: {loss:.4f}")
