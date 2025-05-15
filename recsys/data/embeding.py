@@ -1,5 +1,5 @@
 # use distilbert-BERT model for embedding
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers import SentenceTransformer
 import numpy as np
 import pandas as pd
 import glob
@@ -17,7 +17,7 @@ def reshape_array(input_array, d):
         
         return new_array
 
-def convert_embedding(product_parquet='versions/1/shopping_queries_dataset_products.parquet', query_csv='versions/1/Dataset.csv'):
+def convert_embedding(product_parquet='data/shopping_queries_dataset_products.parquet', query_csv='data/Dataset.csv'):
     
     # Load a pre-trained model (you can choose from various models like BERT, RoBERTa, etc.)
     model = SentenceTransformer('distilbert-base-uncased')

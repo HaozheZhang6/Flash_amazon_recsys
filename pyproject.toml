@@ -1,17 +1,16 @@
 [tool.poetry]
 name = "two-tower-search"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Haozhe Zhang <zhang.hz6666@gmail.com>"]
 readme = "README.md"
 packages = [
-    { include = "recsys"}  # Updated package configuration
+    { include = "recsys" }  # Updated package configuration
 ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 kagglehub = "^0.3.12"
-torch = "^2.6.0"
 pandas = "^2.2.3"
 annoy = "^1.17.3"
 pyarrow = "^19.0.1"
@@ -21,7 +20,12 @@ huggingface-hub = "^0.30.2"
 transformers = "4.42"
 matplotlib = "^3.10.1"
 scikit-learn = "^1.6.1"
+torch = { version = "2.6.0+cu126", source = "torch-cu126"}
 
+[[tool.poetry.source]]
+name = "torch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"

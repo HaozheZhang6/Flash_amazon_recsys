@@ -12,19 +12,27 @@ class TrainingData:
 
 def calculate_and_save_sampling_weights(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Calculate sampling weights for products based on both E and I labels
+    Calculate sampling weights for products based on E labels in training data only
+    and add product frequency to the dataset
     """
     # Calculate frequency for each product (both E and I)
-    product_freq = df[df['esci_label'].isin(['E', 'I'])].groupby('product_id').size()
+    # product_freq = df[df['esci_label'].isin(['E', 'I'])].groupby('product_id').size()
+    # Calculate frequency for each product (only E labels in training data)
+    product_freq = df[
+        (df['esci_label'] == 'E') & 
+        (df['split'] == 'train')
+    ].groupby('product_id').size()
     
     # Calculate weights (freq ^ 0.75)
     weights = product_freq ** 0.75
     
-    # Normalize weights
+    # Normalize weights and frequency
     weights = weights / weights.sum()
+    product_freq = product_freq / product_freq.sum()
     
-    # Add weights to the dataset
+    # Add weights and frequency to the dataset
     df['sampling_weight'] = df['product_id'].map(weights).fillna(0)
+    df['product_frequency'] = df['product_id'].map(product_freq).fillna(0)
     
     return df
 
@@ -36,8 +44,8 @@ def prepare_and_save_dataset() -> pd.DataFrame:
     
     # Load product embedding and title
     df_product_embedding = pd.merge(
-        pd.read_csv('versions/1/product_150k.csv'),
-        pd.read_parquet('versions/1/shopping_queries_dataset_products.parquet')[
+        pd.read_csv('data/product_150k.csv'),
+        pd.read_parquet('data/shopping_queries_dataset_products.parquet')[
             ['product_id', 'product_title']
         ].drop_duplicates(),
         on=['product_id']
@@ -47,7 +55,7 @@ def prepare_and_save_dataset() -> pd.DataFrame:
     
     # Load query embedding and title
     df_dataset = pd.merge(
-        pd.read_csv('versions/1/dataset_150k.csv'),
+        pd.read_csv('data/dataset_150k.csv'),
         df_product_embedding[['product_id', 'product_title']].drop_duplicates(),
         on=['product_id']
     )
@@ -56,7 +64,7 @@ def prepare_and_save_dataset() -> pd.DataFrame:
     df_dataset = calculate_and_save_sampling_weights(df_dataset)
     
     # Save the processed dataset
-    df_dataset.to_csv('versions/1/dataset_150k_processed.csv', index=False)
+    df_dataset.to_csv('data/dataset_150k_processed.csv', index=False)
     print("Dataset saved successfully!")
     
     return df_dataset
@@ -136,16 +144,16 @@ def prepare_pair_wise_data(df: pd.DataFrame) -> pd.DataFrame:
     
     return pairs
 
-def prepare_list_wise_data(df: pd.DataFrame, batch_size: int = 32) -> pd.DataFrame:
+def prepare_list_wise_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Prepare data for list-wise training
-    Each batch contains query-product-reward triplets
+    Each batch contains query-product-reward triplets and product frequency
     """
     # Get all samples with rewards
     list_wise_data = df.copy()
     list_wise_data['reward'] = list_wise_data['esci_label'].map({
         'E': 1.0,  # Clicked
-        'I': 0.5,  # Shown but not clicked
+        'I': 0.05, # Shown but not clicked
         'S': 0.0   # Not shown
     })
     
@@ -204,9 +212,7 @@ def prepare_ranking_data(df: pd.DataFrame) -> pd.DataFrame:
         not_clicked
     ]).reset_index(drop=True)
 
-def load_data(usage: str = "recall", training_method: str = "point_wise") -> Union[Tuple[Tuple[np.ndarray, np.ndarray], np.ndarray], 
-                                                                                 Tuple[Tuple[np.ndarray, np.ndarray, np.ndarray], np.ndarray],
-                                                                                 Tuple[Tuple[np.ndarray, np.ndarray, np.ndarray], np.ndarray]]:
+def load_data(usage: str = "recall", training_method: str = "point_wise") -> Tuple[Union[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray, np.ndarray]], np.ndarray, Union[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray, np.ndarray]], np.ndarray]:
     """
     Load and prepare data for either recall or ranking tasks
     
@@ -220,12 +226,12 @@ def load_data(usage: str = "recall", training_method: str = "point_wise") -> Uni
         For pair_wise:
             (train_q, train_p_pos, train_p_neg), train_labels, (val_q, val_p_pos, val_p_neg), val_labels
         For list_wise:
-            (train_q, train_p, train_r), train_labels, (val_q, val_p, val_r), val_labels
+            (train_q, train_p, train_r, train_freq), train_labels, (val_q, val_p, val_r, val_freq), val_labels
     """
     # Try to load the processed dataset, if not available, prepare and save it
     try:
         print("Loading processed dataset...")
-        df_dataset = pd.read_csv('versions/1/dataset_150k_processed.csv')
+        df_dataset = pd.read_csv('data/dataset_150k_processed.csv')
         print("Dataset loaded successfully!")
     except FileNotFoundError:
         print("Processed dataset not found. Preparing new dataset...")
@@ -281,26 +287,30 @@ def load_data(usage: str = "recall", training_method: str = "point_wise") -> Uni
             val_labels = np.ones(len(test_pairs))
             
         elif training_method == "list_wise":
+            train_data = df_dataset[df_dataset['split'] == 'train']
             # Prepare list-wise data
-            train_data = prepare_list_wise_data(train_data)
-            test_data = prepare_list_wise_data(test_data)
+            train_list_wise = prepare_list_wise_data(train_data)
+            test_list_wise = prepare_list_wise_data(test_data)
             
             # Prepare training data
             train_inputs = [
-                np.array(train_data[query_tower_cols]),
-                np.array(train_data[product_tower_cols]),
-                np.array(train_data['reward'])
+                np.array(train_list_wise[query_tower_cols]),
+                np.array(train_list_wise[product_tower_cols]),
+                np.array(train_list_wise['reward']),
+                np.array(train_list_wise['product_frequency'])
             ]
-            train_labels = np.array(train_data['esci_label'] == 'E').astype('float32')
+            train_labels = np.array(train_list_wise['esci_label'] == 'E').astype('float32')
             
             # Prepare validation data
             val_inputs = [
-                np.array(test_data[query_tower_cols]),
-                np.array(test_data[product_tower_cols]),
-                np.array(test_data['reward'])
+                np.array(test_list_wise[query_tower_cols]),
+                np.array(test_list_wise[product_tower_cols]),
+                np.array(test_list_wise['reward']),
+                np.array(test_list_wise['product_frequency'])
             ]
-            val_labels = np.array(test_data['esci_label'] == 'E').astype('float32')
+            val_labels = np.array(test_list_wise['esci_label'] == 'E').astype('float32')
             
+            return train_inputs, train_labels, val_inputs, val_labels
         else:
             raise ValueError("training_method must be one of: point_wise, pair_wise, list_wise")
             
@@ -333,14 +343,70 @@ def load_data(usage: str = "recall", training_method: str = "point_wise") -> Uni
     
     return train_inputs, train_labels, val_inputs, val_labels
 
+def load_test_data(
+    data_path: str = "data/dataset_150k_processed.csv",
+) -> Tuple[List[np.ndarray], Dict[int, List[int]]]:
+    """
+    Load and process test data for model evaluation.
+    
+    Args:
+        data_path: Path to the processed dataset
+        
+    Returns:
+        Tuple containing:
+        - List of numpy arrays:
+            [
+                query_ids: array of query IDs,
+                product_ids: array of product IDs,
+                query_embeddings: array of query embeddings,
+                product_embeddings: array of product embeddings
+            ]
+        - Dictionary mapping query IDs to lists of clicked product IDs
+    """
+    # Load the dataset
+    df_dataset = pd.read_csv(data_path)
+    
+    # Get test data with positive labels
+    test_data = df_dataset[
+        (df_dataset['split'] == 'test') & 
+        (df_dataset['esci_label'] == 'E')
+    ].copy()
+    
+    if test_data.empty:
+        return [], {}
+    
+    # Create unique query IDs
+    unique_queries = test_data['query'].unique()
+    query_to_id = {query: idx for idx, query in enumerate(unique_queries)}
+    test_data.loc[:, 'query_id'] = test_data['query'].map(query_to_id)
+    
+    # Get embeddings
+    query_cols = [f'q{i}' for i in range(32)]
+    product_cols = [f'p{i}' for i in range(160)]
+    
+    # Create clicked products dictionary using query IDs
+    clicked_products = {}
+    for query_id, group in test_data.groupby('query_id'):
+        clicked_products[query_id] = group['product_id'].tolist()
+    
+    # Prepare return data as list of arrays
+    test_data_arrays = [
+        test_data['query_id'].values,
+        test_data['product_id'].values,
+        test_data[query_cols].values,
+        test_data[product_cols].values
+    ]
+    
+    return test_data_arrays, clicked_products
+
 if __name__ == "__main__":
     # Test point-wise data loading
-    # point_wise_train_inputs, point_wise_train_labels, point_wise_val_inputs, point_wise_val_labels = load_data(usage="recall", training_method="point_wise")
-    # print("Point-wise data shapes:")
-    # print(f"Train inputs: {[x.shape for x in point_wise_train_inputs]}")
-    # print(f"Train labels: {point_wise_train_labels.shape}")
-    # print(f"Val inputs: {[x.shape for x in point_wise_val_inputs]}")
-    # print(f"Val labels: {point_wise_val_labels.shape}")
+    point_wise_train_inputs, point_wise_train_labels, point_wise_val_inputs, point_wise_val_labels = load_data(usage="recall", training_method="point_wise")
+    print("Point-wise data shapes:")
+    print(f"Train inputs: {[x.shape for x in point_wise_train_inputs]}")
+    print(f"Train labels: {point_wise_train_labels.shape}")
+    print(f"Val inputs: {[x.shape for x in point_wise_val_inputs]}")
+    print(f"Val labels: {point_wise_val_labels.shape}")
     
     # Test pair-wise data loading
     pair_wise_train_inputs, pair_wise_train_labels, pair_wise_val_inputs, pair_wise_val_labels = load_data(usage="recall", training_method="pair_wise")
