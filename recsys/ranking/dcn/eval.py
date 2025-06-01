@@ -8,13 +8,6 @@ try:
     from recsys.ranking.dcn.model import DCN
 except ImportError:
     print("Error: Could not import DCN from recsys.ranking.dcn.model. Please ensure it's correctly defined.")
-    # Define a dummy DCN if not available, for the script to be syntactically valid
-    class DCN(torch.nn.Module):
-        def __init__(self, config): 
-            super().__init__()
-            self.fc = torch.nn.Linear(config.q_in + config.p_in, 1)
-        def forward(self, q, p): 
-            return self.fc(torch.cat([q, p], dim=1))
 
 try:
     from recsys.ranking.dcn.train import DCNConfig, MODEL_DIR
